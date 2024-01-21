@@ -1,0 +1,2045 @@
+2024-01-07 01:04:25,103 : ERROR : KNIME-Worker-0 :  : DesktopAPUtil :  :  : Could not check for updates
+java.net.UnknownHostException: update.knime.com
+	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source)
+	at java.base/java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.base/java.net.Socket.connect(Unknown Source)
+	at java.base/sun.security.ssl.SSLSocketImpl.connect(Unknown Source)
+	at java.base/sun.net.NetworkClient.doConnect(Unknown Source)
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsClient.<init>(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsClient.New(Unknown Source)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(Unknown Source)
+	at org.knime.core.eclipseUtil.UpdateChecker.checkForNewRelease(UpdateChecker.java:181)
+	at org.knime.product.rcp.intro.UpdateDetector.checkForNewRelease(UpdateDetector.java:97)
+	at org.knime.ui.java.util.DesktopAPUtil.checkForUpdate(DesktopAPUtil.java:241)
+	at org.knime.gateway.impl.webui.UpdateStateProvider.lambda$0(UpdateStateProvider.java:86)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-01-07 01:05:17,669 : WARN  : ModalContext :  : FileNodePersistor : MISSING Topic Extractor (Parallel LDA) : 4:15 : Unable to load port content for node "MISSING Topic Extractor (Parallel LDA)": Invalid outport index in settings: 3
+org.knime.core.node.InvalidSettingsException: Invalid outport index in settings: 3
+	at org.knime.core.node.FileNodePersistor.loadPorts(FileNodePersistor.java:325)
+	at org.knime.core.node.FileNodePersistor.load(FileNodePersistor.java:996)
+	at org.knime.core.node.workflow.FileNativeNodeContainerPersistor.loadNCAndWashModelSettings(FileNativeNodeContainerPersistor.java:256)
+	at org.knime.core.node.workflow.FileSingleNodeContainerPersistor.loadNodeContainer(FileSingleNodeContainerPersistor.java:267)
+	at org.knime.core.node.workflow.WorkflowManager.postLoad(WorkflowManager.java:8919)
+	at org.knime.core.node.workflow.WorkflowManager.loadContent(WorkflowManager.java:8821)
+	at org.knime.core.node.workflow.WorkflowManager.postLoad(WorkflowManager.java:8935)
+	at org.knime.core.node.workflow.WorkflowManager.loadContent(WorkflowManager.java:8821)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8684)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8605)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:8578)
+	at org.knime.core.node.workflow.WorkflowManager.loadProject(WorkflowManager.java:8423)
+	at org.knime.workbench.editor2.LoadWorkflowRunnable.run(LoadWorkflowRunnable.java:199)
+	at org.knime.ui.java.util.DesktopAPUtil.loadWorkflow(DesktopAPUtil.java:182)
+	at org.knime.ui.java.util.DesktopAPUtil.fetchAndLoadWorkflowWithTask(DesktopAPUtil.java:146)
+	at org.knime.ui.java.api.OpenProject.loadProject(OpenProject.java:227)
+	at org.knime.ui.java.api.OpenProject.openProjectInWebUIOnly(OpenProject.java:177)
+	at org.knime.ui.java.api.OpenProject.lambda$0(OpenProject.java:110)
+	at org.knime.ui.java.util.DesktopAPUtil.lambda$10(DesktopAPUtil.java:408)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+2024-01-07 01:05:17,706 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  : Errors during load: Status: DataLoadError: Topic Detection Based on Movie Reviews 4 loaded with error during data load
+2024-01-07 01:05:17,706 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :   Status: DataLoadError: Topic Detection Based on Movie Reviews 4
+2024-01-07 01:05:17,706 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :     Status: Error: Node "Topic Extractor (Parallel LDA)" not available from extension "KNIME Textprocessing" (provided by "KNIME AG, Zurich, Switzerland"; plugin "org.knime.ext.textprocessing" is not installed)
+2024-01-07 01:05:17,706 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :     Status: Error: Document Creation and document pre-processing 4:287
+2024-01-07 01:05:17,706 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :       Status: Error: Node "Punctuation Erasure" not available from extension "KNIME Textprocessing" (provided by "KNIME AG, Zurich, Switzerland"; plugin "org.knime.ext.textprocessing" is not installed)
+2024-01-07 01:05:17,706 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :       Status: Error: Node "Number Filter" not available from extension "KNIME Textprocessing" (provided by "KNIME AG, Zurich, Switzerland"; plugin "org.knime.ext.textprocessing" is not installed)
+2024-01-07 01:05:17,706 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :       Status: Error: Node "N Chars Filter" not available from extension "KNIME Textprocessing" (provided by "KNIME AG, Zurich, Switzerland"; plugin "org.knime.ext.textprocessing" is not installed)
+2024-01-07 01:05:17,707 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :       Status: Error: Node "Case Converter" not available from extension "KNIME Textprocessing" (provided by "KNIME AG, Zurich, Switzerland"; plugin "org.knime.ext.textprocessing" is not installed)
+2024-01-07 01:05:17,707 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :       Status: Error: Node "Strings To Document" not available from extension "KNIME Textprocessing" (provided by "KNIME AG, Zurich, Switzerland"; plugin "org.knime.ext.textprocessing" is not installed)
+2024-01-07 01:05:17,707 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :       Status: Error: Node "Stop Word Filter" not available from extension "KNIME Textprocessing" (provided by "KNIME AG, Zurich, Switzerland"; plugin "org.knime.ext.textprocessing" is not installed)
+2024-01-07 01:05:17,707 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :     Status: DataLoadError: MISSING Topic Extractor (Parallel LDA) 4:15
+2024-01-07 01:05:17,707 : ERROR : ModalContext :  : LoadWorkflowRunnable :  :  :       Status: DataLoadError: Unable to load port content for node "MISSING Topic Extractor (Parallel LDA)": Invalid outport index in settings: 3
+2024-01-07 01:15:16,708 : ERROR : KNIME-Worker-0 :  : DesktopAPUtil :  :  : Could not check for updates
+java.net.UnknownHostException: update.knime.com
+	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source)
+	at java.base/java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.base/java.net.Socket.connect(Unknown Source)
+	at java.base/sun.security.ssl.SSLSocketImpl.connect(Unknown Source)
+	at java.base/sun.net.NetworkClient.doConnect(Unknown Source)
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsClient.<init>(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsClient.New(Unknown Source)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(Unknown Source)
+	at org.knime.core.eclipseUtil.UpdateChecker.checkForNewRelease(UpdateChecker.java:181)
+	at org.knime.product.rcp.intro.UpdateDetector.checkForNewRelease(UpdateDetector.java:97)
+	at org.knime.ui.java.util.DesktopAPUtil.checkForUpdate(DesktopAPUtil.java:241)
+	at org.knime.gateway.impl.webui.UpdateStateProvider.lambda$0(UpdateStateProvider.java:86)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-01-07 01:21:23,022 : ERROR : KNIME-Worker-0 :  : DesktopAPUtil :  :  : Could not check for updates
+java.net.UnknownHostException: update.knime.com
+	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source)
+	at java.base/java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.base/java.net.Socket.connect(Unknown Source)
+	at java.base/sun.security.ssl.SSLSocketImpl.connect(Unknown Source)
+	at java.base/sun.net.NetworkClient.doConnect(Unknown Source)
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsClient.<init>(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsClient.New(Unknown Source)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(Unknown Source)
+	at org.knime.core.eclipseUtil.UpdateChecker.checkForNewRelease(UpdateChecker.java:181)
+	at org.knime.product.rcp.intro.UpdateDetector.checkForNewRelease(UpdateDetector.java:97)
+	at org.knime.ui.java.util.DesktopAPUtil.checkForUpdate(DesktopAPUtil.java:241)
+	at org.knime.gateway.impl.webui.UpdateStateProvider.lambda$0(UpdateStateProvider.java:86)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-01-07 01:40:47,642 : WARN  : comm-pool-thread-7 :  : Node : Sorter : 4:2 : No selected columns to sort
+2024-01-07 01:47:45,183 : WARN  : comm-pool-thread-9 :  : Node : Excel Writer : 4:3 : Please specify a file
+2024-01-07 17:21:18,432 : WARN  : comm-pool-thread-19 :  : Node : Duplicate Row Filter : 5:2 : At least one column has to be selected for duplicate detection.
+2024-01-07 17:26:01,877 : WARN  : comm-pool-thread-21 :  : Node : String Manipulation : 5:3 : No expression has been set.
+2024-01-07 17:35:57,343 : WARN  : comm-pool-thread-24 :  : Node : String Manipulation : 5:5 : No expression has been set.
+2024-01-07 17:44:41,842 : WARN  : comm-pool-thread-26 :  : Node : Row Filter : 5:6 : No row filter specified
+2024-01-07 17:52:49,064 : WARN  : comm-pool-thread-28 :  : Node : Row Filter : 5:7 : No row filter specified
+2024-01-07 18:00:16,626 : WARN  : KNIME-Worker-14-Missing Value 5:8 :  : Node : Missing Value : 5:8 : Column "Logins" still contains missing values.
+2024-01-07 19:22:01,340 : ERROR : main :  : NodeSettingsToJsonFormsSettings : Column Renamer (Dictionary) : 5:10 : Failed to load settings ('String for key "lookupColumn" not found.'). New settings are created for the dialog.
+org.knime.core.node.InvalidSettingsException: String for key "lookupColumn" not found.
+	at org.knime.core.node.config.base.ConfigBase.getString(ConfigBase.java:410)
+	at jdk.internal.reflect.GeneratedMethodAccessor183.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.knime.core.webui.node.dialog.NodeAndVariableSettingsProxy.lambda$1(NodeAndVariableSettingsProxy.java:94)
+	at org.knime.core.webui.node.dialog.$Proxy71.getString(Unknown Source)
+	at org.knime.core.webui.node.dialog.defaultdialog.persistence.field.DefaultFieldNodeSettingsPersistorFactory$PersistorImpl.load(DefaultFieldNodeSettingsPersistorFactory.java:154)
+	at org.knime.core.webui.node.dialog.defaultdialog.persistence.field.DefaultFieldNodeSettingsPersistor.load(DefaultFieldNodeSettingsPersistor.java:78)
+	at org.knime.core.webui.node.dialog.defaultdialog.persistence.field.FieldBasedNodeSettingsPersistor.lambda$2(FieldBasedNodeSettingsPersistor.java:113)
+	at org.knime.core.webui.node.dialog.defaultdialog.persistence.field.FieldBasedNodeSettingsPersistor.useBlackMagicToAccessFields(FieldBasedNodeSettingsPersistor.java:124)
+	at org.knime.core.webui.node.dialog.defaultdialog.persistence.field.FieldBasedNodeSettingsPersistor.load(FieldBasedNodeSettingsPersistor.java:113)
+	at org.knime.core.webui.node.dialog.defaultdialog.persistence.field.FieldBasedNodeSettingsPersistor.load(FieldBasedNodeSettingsPersistor.java:1)
+	at org.knime.core.webui.node.dialog.defaultdialog.DefaultNodeSettings.loadSettings(DefaultNodeSettings.java:370)
+	at org.knime.core.webui.node.dialog.defaultdialog.settingsconversion.NodeSettingsToJsonFormsSettings.fromNodeSettingsToDefaultNodeSettings(NodeSettingsToJsonFormsSettings.java:131)
+	at org.knime.core.webui.node.dialog.defaultdialog.settingsconversion.NodeSettingsToJsonFormsSettings.fromNodeSettingsToDefaultNodeSettingsOrDefault(NodeSettingsToJsonFormsSettings.java:137)
+	at org.knime.core.webui.node.dialog.defaultdialog.settingsconversion.NodeSettingsToJsonFormsSettings$GetSettings.getDefaultNodeSettingsUnchecked(NodeSettingsToJsonFormsSettings.java:156)
+	at org.knime.core.webui.node.dialog.defaultdialog.settingsconversion.NodeSettingsToJsonFormsSettings.allNodeSettingsToJsonFormsSettings(NodeSettingsToJsonFormsSettings.java:124)
+	at org.knime.core.webui.node.dialog.defaultdialog.settingsconversion.NodeSettingsToJsonFormsSettings.nodeSettingsToJsonFormsSettingsOrDefault(NodeSettingsToJsonFormsSettings.java:115)
+	at org.knime.core.webui.node.dialog.defaultdialog.DefaultNodeSettingsService.fromNodeSettings(DefaultNodeSettingsService.java:117)
+	at org.knime.core.webui.node.dialog.InitialData.get(InitialData.java:97)
+	at org.knime.core.webui.data.InitialDataService.getInitialData(InitialDataService.java:115)
+	at org.knime.core.webui.node.DataServiceManager.callInitialDataService(DataServiceManager.java:137)
+	at org.knime.gateway.api.entity.NodeUIExtensionEnt.<init>(NodeUIExtensionEnt.java:118)
+	at org.knime.gateway.api.entity.NodeUIExtensionEnt.<init>(NodeUIExtensionEnt.java:88)
+	at org.knime.gateway.api.entity.NodeDialogEnt.<init>(NodeDialogEnt.java:74)
+	at org.knime.js.cef.pagebuilder.PageBuilderUtil$NodeUIExtensionEnts.<init>(PageBuilderUtil.java:328)
+	at org.knime.js.cef.pagebuilder.PageBuilderUtil.initializePageBuilderForView(PageBuilderUtil.java:117)
+	at org.knime.js.cef.nodeview.CEFNodeView.lambda$6(CEFNodeView.java:389)
+	at org.knime.js.cef.nodeview.CEFNodeView$3.completed(CEFNodeView.java:403)
+	at com.equo.chromium.swt.internal.Chromium.lambda$10(Chromium.java:861)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4368)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3991)
+	at org.knime.js.cef.nodeview.CEFNodeView.blockUntilDisposed(CEFNodeView.java:442)
+	at org.knime.js.cef.nodeview.CEFNodeView.callOpenView(CEFNodeView.java:331)
+	at org.knime.core.node.AbstractNodeView.openView(AbstractNodeView.java:197)
+	at org.knime.core.node.Node.invokeOpenView(Node.java:2739)
+	at org.knime.workbench.editor2.actions.OpenNodeViewAction.openNodeView(OpenNodeViewAction.java:146)
+	at org.knime.workbench.editor2.editparts.NodeContainerEditPart.openNodeDialog(NodeContainerEditPart.java:862)
+	at org.knime.ui.java.api.NodeAPI.openNodeDialog(NodeAPI.java:97)
+	at jdk.internal.reflect.GeneratedMethodAccessor187.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.knime.ui.java.api.DesktopAPI.invokeMethod(DesktopAPI.java:167)
+	at org.knime.ui.java.api.DesktopAPI.lambda$1(DesktopAPI.java:138)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4368)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3991)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.knime.product.rcp.KNIMEApplication.start(KNIMEApplication.java:204)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+2024-01-07 19:26:46,803 : ERROR : KNIME-Worker-0 :  : DesktopAPUtil :  :  : Could not check for updates
+java.net.UnknownHostException: update.knime.com
+	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source)
+	at java.base/java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.base/java.net.Socket.connect(Unknown Source)
+	at java.base/sun.security.ssl.SSLSocketImpl.connect(Unknown Source)
+	at java.base/sun.net.NetworkClient.doConnect(Unknown Source)
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsClient.<init>(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsClient.New(Unknown Source)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(Unknown Source)
+	at org.knime.core.eclipseUtil.UpdateChecker.checkForNewRelease(UpdateChecker.java:181)
+	at org.knime.product.rcp.intro.UpdateDetector.checkForNewRelease(UpdateDetector.java:97)
+	at org.knime.ui.java.util.DesktopAPUtil.checkForUpdate(DesktopAPUtil.java:241)
+	at org.knime.gateway.impl.webui.UpdateStateProvider.lambda$0(UpdateStateProvider.java:86)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-01-07 19:31:21,292 : WARN  : comm-pool-thread-4 :  : Node : Constant Value Column : 3:11 : Configuration missing.
+2024-01-07 19:32:18,117 : WARN  : main :  : Node : Constant Value Column : 3:11 : java.lang.NumberFormatException: empty String
+2024-01-07 19:32:35,218 : WARN  : main :  : Node : Constant Value Column : 3:11 : java.lang.NumberFormatException: empty String
+2024-01-07 19:32:36,428 : WARN  : main :  : Node : Constant Value Column : 3:11 : java.lang.NumberFormatException: empty String
+2024-01-07 19:32:37,399 : WARN  : main :  : Node : Constant Value Column : 3:11 : java.lang.NumberFormatException: empty String
+2024-01-07 19:33:23,997 : WARN  : main :  : Node : Constant Value Column : 3:11 : java.lang.NumberFormatException: empty String
+2024-01-07 19:33:24,889 : WARN  : main :  : Node : Constant Value Column : 3:11 : java.lang.NumberFormatException: empty String
+2024-01-07 19:33:29,229 : WARN  : main :  : Node : Constant Value Column : 3:11 : java.lang.NumberFormatException: empty String
+2024-01-07 19:34:16,227 : ERROR : main :  : NodeSettingsToJsonFormsSettings : Column Renamer (Dictionary) : 3:11 : Failed to load settings ('String for key "lookupColumn" not found.'). New settings are created for the dialog.
+org.knime.core.node.InvalidSettingsException: String for key "lookupColumn" not found.
+	at org.knime.core.node.config.base.ConfigBase.getString(ConfigBase.java:410)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.knime.core.webui.node.dialog.NodeAndVariableSettingsProxy.lambda$1(NodeAndVariableSettingsProxy.java:94)
+	at org.knime.core.webui.node.dialog.$Proxy73.getString(Unknown Source)
+	at org.knime.core.webui.node.dialog.defaultdialog.persistence.field.DefaultFieldNodeSettingsPersistorFactory$PersistorImpl.load(DefaultFieldNodeSettingsPersistorFactory.java:154)
+	at org.knime.core.webui.node.dialog.defaultdialog.persistence.field.DefaultFieldNodeSettingsPersistor.load(DefaultFieldNodeSettingsPersistor.java:78)
+	at org.knime.core.webui.node.dialog.defaultdialog.persistence.field.FieldBasedNodeSettingsPersistor.lambda$2(FieldBasedNodeSettingsPersistor.java:113)
+	at org.knime.core.webui.node.dialog.defaultdialog.persistence.field.FieldBasedNodeSettingsPersistor.useBlackMagicToAccessFields(FieldBasedNodeSettingsPersistor.java:124)
+	at org.knime.core.webui.node.dialog.defaultdialog.persistence.field.FieldBasedNodeSettingsPersistor.load(FieldBasedNodeSettingsPersistor.java:113)
+	at org.knime.core.webui.node.dialog.defaultdialog.persistence.field.FieldBasedNodeSettingsPersistor.load(FieldBasedNodeSettingsPersistor.java:1)
+	at org.knime.core.webui.node.dialog.defaultdialog.DefaultNodeSettings.loadSettings(DefaultNodeSettings.java:370)
+	at org.knime.core.webui.node.dialog.defaultdialog.settingsconversion.NodeSettingsToJsonFormsSettings.fromNodeSettingsToDefaultNodeSettings(NodeSettingsToJsonFormsSettings.java:131)
+	at org.knime.core.webui.node.dialog.defaultdialog.settingsconversion.NodeSettingsToJsonFormsSettings.fromNodeSettingsToDefaultNodeSettingsOrDefault(NodeSettingsToJsonFormsSettings.java:137)
+	at org.knime.core.webui.node.dialog.defaultdialog.settingsconversion.NodeSettingsToJsonFormsSettings$GetSettings.getDefaultNodeSettingsUnchecked(NodeSettingsToJsonFormsSettings.java:156)
+	at org.knime.core.webui.node.dialog.defaultdialog.settingsconversion.NodeSettingsToJsonFormsSettings.allNodeSettingsToJsonFormsSettings(NodeSettingsToJsonFormsSettings.java:124)
+	at org.knime.core.webui.node.dialog.defaultdialog.settingsconversion.NodeSettingsToJsonFormsSettings.nodeSettingsToJsonFormsSettingsOrDefault(NodeSettingsToJsonFormsSettings.java:115)
+	at org.knime.core.webui.node.dialog.defaultdialog.DefaultNodeSettingsService.fromNodeSettings(DefaultNodeSettingsService.java:117)
+	at org.knime.core.webui.node.dialog.InitialData.get(InitialData.java:97)
+	at org.knime.core.webui.data.InitialDataService.getInitialData(InitialDataService.java:115)
+	at org.knime.core.webui.node.DataServiceManager.callInitialDataService(DataServiceManager.java:137)
+	at org.knime.gateway.api.entity.NodeUIExtensionEnt.<init>(NodeUIExtensionEnt.java:118)
+	at org.knime.gateway.api.entity.NodeUIExtensionEnt.<init>(NodeUIExtensionEnt.java:88)
+	at org.knime.gateway.api.entity.NodeDialogEnt.<init>(NodeDialogEnt.java:74)
+	at org.knime.js.cef.pagebuilder.PageBuilderUtil$NodeUIExtensionEnts.<init>(PageBuilderUtil.java:328)
+	at org.knime.js.cef.pagebuilder.PageBuilderUtil.initializePageBuilderForView(PageBuilderUtil.java:117)
+	at org.knime.js.cef.nodeview.CEFNodeView.lambda$6(CEFNodeView.java:389)
+	at org.knime.js.cef.nodeview.CEFNodeView$3.completed(CEFNodeView.java:403)
+	at com.equo.chromium.swt.internal.Chromium.lambda$10(Chromium.java:861)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4368)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3991)
+	at org.knime.js.cef.nodeview.CEFNodeView.blockUntilDisposed(CEFNodeView.java:442)
+	at org.knime.js.cef.nodeview.CEFNodeView.callOpenView(CEFNodeView.java:331)
+	at org.knime.core.node.AbstractNodeView.openView(AbstractNodeView.java:197)
+	at org.knime.core.node.Node.invokeOpenView(Node.java:2739)
+	at org.knime.workbench.editor2.actions.OpenNodeViewAction.openNodeView(OpenNodeViewAction.java:146)
+	at org.knime.workbench.editor2.editparts.NodeContainerEditPart.openNodeDialog(NodeContainerEditPart.java:862)
+	at org.knime.ui.java.api.NodeAPI.openNodeDialog(NodeAPI.java:97)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.knime.ui.java.api.DesktopAPI.invokeMethod(DesktopAPI.java:167)
+	at org.knime.ui.java.api.DesktopAPI.lambda$1(DesktopAPI.java:138)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4368)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3991)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.knime.product.rcp.KNIMEApplication.start(KNIMEApplication.java:204)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+2024-01-07 19:35:56,883 : ERROR : main :  : NodeSettingsToJsonFormsSettings : Cell Updater : 3:11 : Failed to load settings ('String for key "columnMode" not found.'). New settings are created for the dialog.
+org.knime.core.node.InvalidSettingsException: String for key "columnMode" not found.
+	at org.knime.core.node.config.base.ConfigBase.getString(ConfigBase.java:410)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.knime.core.webui.node.dialog.NodeAndVariableSettingsProxy.lambda$1(NodeAndVariableSettingsProxy.java:94)
+	at org.knime.core.webui.node.dialog.$Proxy73.getString(Unknown Source)
+	at org.knime.core.webui.node.dialog.defaultdialog.persistence.field.EnumFieldPersistor.load(EnumFieldPersistor.java:83)
+	at org.knime.core.webui.node.dialog.defaultdialog.persistence.field.EnumFieldPersistor.load(EnumFieldPersistor.java:1)
+	at org.knime.core.webui.node.dialog.defaultdialog.persistence.field.FieldBasedNodeSettingsPersistor.lambda$2(FieldBasedNodeSettingsPersistor.java:113)
+	at org.knime.core.webui.node.dialog.defaultdialog.persistence.field.FieldBasedNodeSettingsPersistor.useBlackMagicToAccessFields(FieldBasedNodeSettingsPersistor.java:124)
+	at org.knime.core.webui.node.dialog.defaultdialog.persistence.field.FieldBasedNodeSettingsPersistor.load(FieldBasedNodeSettingsPersistor.java:113)
+	at org.knime.core.webui.node.dialog.defaultdialog.persistence.field.FieldBasedNodeSettingsPersistor.load(FieldBasedNodeSettingsPersistor.java:1)
+	at org.knime.core.webui.node.dialog.defaultdialog.DefaultNodeSettings.loadSettings(DefaultNodeSettings.java:370)
+	at org.knime.core.webui.node.dialog.defaultdialog.settingsconversion.NodeSettingsToJsonFormsSettings.fromNodeSettingsToDefaultNodeSettings(NodeSettingsToJsonFormsSettings.java:131)
+	at org.knime.core.webui.node.dialog.defaultdialog.settingsconversion.NodeSettingsToJsonFormsSettings.fromNodeSettingsToDefaultNodeSettingsOrDefault(NodeSettingsToJsonFormsSettings.java:137)
+	at org.knime.core.webui.node.dialog.defaultdialog.settingsconversion.NodeSettingsToJsonFormsSettings$GetSettings.getDefaultNodeSettingsUnchecked(NodeSettingsToJsonFormsSettings.java:156)
+	at org.knime.core.webui.node.dialog.defaultdialog.settingsconversion.NodeSettingsToJsonFormsSettings.allNodeSettingsToJsonFormsSettings(NodeSettingsToJsonFormsSettings.java:124)
+	at org.knime.core.webui.node.dialog.defaultdialog.settingsconversion.NodeSettingsToJsonFormsSettings.nodeSettingsToJsonFormsSettingsOrDefault(NodeSettingsToJsonFormsSettings.java:115)
+	at org.knime.core.webui.node.dialog.defaultdialog.DefaultNodeSettingsService.fromNodeSettings(DefaultNodeSettingsService.java:117)
+	at org.knime.core.webui.node.dialog.InitialData.get(InitialData.java:97)
+	at org.knime.core.webui.data.InitialDataService.getInitialData(InitialDataService.java:115)
+	at org.knime.core.webui.node.DataServiceManager.callInitialDataService(DataServiceManager.java:137)
+	at org.knime.gateway.api.entity.NodeUIExtensionEnt.<init>(NodeUIExtensionEnt.java:118)
+	at org.knime.gateway.api.entity.NodeUIExtensionEnt.<init>(NodeUIExtensionEnt.java:88)
+	at org.knime.gateway.api.entity.NodeDialogEnt.<init>(NodeDialogEnt.java:74)
+	at org.knime.js.cef.pagebuilder.PageBuilderUtil$NodeUIExtensionEnts.<init>(PageBuilderUtil.java:328)
+	at org.knime.js.cef.pagebuilder.PageBuilderUtil.initializePageBuilderForView(PageBuilderUtil.java:117)
+	at org.knime.js.cef.nodeview.CEFNodeView.lambda$6(CEFNodeView.java:389)
+	at org.knime.js.cef.nodeview.CEFNodeView$3.completed(CEFNodeView.java:403)
+	at com.equo.chromium.swt.internal.Chromium.lambda$10(Chromium.java:861)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4368)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3991)
+	at org.knime.js.cef.nodeview.CEFNodeView.blockUntilDisposed(CEFNodeView.java:442)
+	at org.knime.js.cef.nodeview.CEFNodeView.callOpenView(CEFNodeView.java:331)
+	at org.knime.core.node.AbstractNodeView.openView(AbstractNodeView.java:197)
+	at org.knime.core.node.Node.invokeOpenView(Node.java:2739)
+	at org.knime.workbench.editor2.actions.OpenNodeViewAction.openNodeView(OpenNodeViewAction.java:146)
+	at org.knime.workbench.editor2.editparts.NodeContainerEditPart.openNodeDialog(NodeContainerEditPart.java:862)
+	at org.knime.ui.java.api.NodeAPI.openNodeDialog(NodeAPI.java:97)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.knime.ui.java.api.DesktopAPI.invokeMethod(DesktopAPI.java:167)
+	at org.knime.ui.java.api.DesktopAPI.lambda$1(DesktopAPI.java:138)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4368)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3991)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.knime.product.rcp.KNIMEApplication.start(KNIMEApplication.java:204)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+2024-01-07 19:37:22,104 : WARN  : comm-pool-thread-7 :  : Node : String Replacer : 3:11 : No column selected, using 'Full_name'.
+2024-01-07 19:38:20,147 : WARN  : comm-pool-thread-7 :  : Node : Column Resorter : 3:11 : All columns stay in same order.
+2024-01-07 19:40:46,173 : WARN  : comm-pool-thread-8 :  : Node : CSV Writer : 3:12 : Please specify a file
+2024-01-07 19:46:47,739 : ERROR : main :  : LifeCycle :  :  : There are open eclipse editors which is not expected: 3: cleaning_data
+2024-01-07 19:47:50,677 : ERROR : KNIME-Worker-0 :  : DesktopAPUtil :  :  : Could not check for updates
+java.net.UnknownHostException: update.knime.com
+	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source)
+	at java.base/java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.base/java.net.Socket.connect(Unknown Source)
+	at java.base/sun.security.ssl.SSLSocketImpl.connect(Unknown Source)
+	at java.base/sun.net.NetworkClient.doConnect(Unknown Source)
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsClient.<init>(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsClient.New(Unknown Source)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(Unknown Source)
+	at org.knime.core.eclipseUtil.UpdateChecker.checkForNewRelease(UpdateChecker.java:181)
+	at org.knime.product.rcp.intro.UpdateDetector.checkForNewRelease(UpdateDetector.java:97)
+	at org.knime.ui.java.util.DesktopAPUtil.checkForUpdate(DesktopAPUtil.java:241)
+	at org.knime.gateway.impl.webui.UpdateStateProvider.lambda$0(UpdateStateProvider.java:86)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-01-08 19:55:14,150 : WARN  : comm-pool-thread-14 :  : Node : Joiner : 5:5 : No join columns passed.
+2024-01-09 00:28:07,718 : WARN  : comm-pool-thread-19 :  : Node : Joiner : 5:8 : No join columns passed.
+2024-01-09 00:32:44,363 : WARN  : comm-pool-thread-21 :  : Node : Math Formula : 5:9 : No configuration available
+2024-01-09 00:36:53,763 : WARN  : comm-pool-thread-22 :  : Node : Row Filter : 5:11 : No row filter specified
+2024-01-09 01:53:30,997 : WARN  : main :  : Node : GroupBy : 5:12 : No grouping column included. Aggregate complete table.
+2024-01-09 01:53:30,998 : WARN  : main :  : Node : GroupBy : 5:12 : No aggregation column defined
+2024-01-09 01:53:30,998 : WARN  : main :  : Node : GroupBy : 5:12 : Please select at least one group or aggregation column
+2024-01-09 17:49:40,565 : WARN  : comm-pool-thread-26 :  : Node : Sorter : 5:13 : No selected columns to sort
+2024-01-09 17:52:04,379 : WARN  : comm-pool-thread-27 :  : Node : Row Filter : 5:14 : No row filter specified
+2024-01-09 18:02:41,855 : WARN  : comm-pool-thread-29 :  : Node : Row Filter : 5:16 : No row filter specified
+2024-01-10 18:50:44,559 : ERROR : main :  : LifeCycle :  :  : There are open eclipse editors which is not expected: 3: cleaning_data,4: hello world,5: Sale report automation
+2024-01-10 18:51:27,718 : ERROR : KNIME-Worker-0 :  : DesktopAPUtil :  :  : Could not check for updates
+java.net.UnknownHostException: update.knime.com
+	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source)
+	at java.base/java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.base/java.net.Socket.connect(Unknown Source)
+	at java.base/sun.security.ssl.SSLSocketImpl.connect(Unknown Source)
+	at java.base/sun.net.NetworkClient.doConnect(Unknown Source)
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsClient.<init>(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsClient.New(Unknown Source)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(Unknown Source)
+	at org.knime.core.eclipseUtil.UpdateChecker.checkForNewRelease(UpdateChecker.java:181)
+	at org.knime.product.rcp.intro.UpdateDetector.checkForNewRelease(UpdateDetector.java:97)
+	at org.knime.ui.java.util.DesktopAPUtil.checkForUpdate(DesktopAPUtil.java:241)
+	at org.knime.gateway.impl.webui.UpdateStateProvider.lambda$0(UpdateStateProvider.java:86)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-01-10 18:55:48,495 : WARN  : main :  : Node : GroupBy : 3:12 : No grouping column included. Aggregate complete table.
+2024-01-10 18:55:48,496 : WARN  : main :  : Node : GroupBy : 3:12 : No aggregation column defined
+2024-01-10 18:55:48,525 : WARN  : main :  : Node : GroupBy : 3:12 : Please select at least one group or aggregation column
+2024-01-10 18:58:19,901 : WARN  : main :  : Node : Sorter : 3:13 : No selected columns to sort
+2024-01-10 18:59:25,736 : WARN  : main :  : Node : Row Filter : 3:14 : No row filter specified
+2024-01-10 19:12:27,373 : WARN  : main :  : Node : Row Filter : 3:16 : No row filter specified
+2024-01-11 17:03:13,214 : WARN  : comm-pool-thread-9 :  : Node : String to Date&Time : 3:18 : Node must be configured.
+2024-01-11 17:08:14,240 : ERROR : KNIME-Worker-21-String to Date&Time 3:18 :  : Node : String to Date&Time : 3:18 : Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+    RowID      |   ..   | Customer_ID |  Invoice_time  |    Country    
+-----------------------------------------------------------------------
+Row0_Row114... | ..     | 13509       | D01/9/19T08... | United Kingdom
+                                       ^^^^^^^^^^^^^^^
+Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+org.knime.core.node.KNIMEException$KNIMERuntimeException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+	at org.knime.core.node.KNIMEException.toUnchecked(KNIMEException.java:145)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:544)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel.execute(StringToDateTimeNodeModel.java:338)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.core.node.KNIMEException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+	at org.knime.core.node.KNIMEException.of(KNIMEException.java:136)
+	... 22 more
+Caused by: java.time.format.DateTimeParseException: Text 'D01/9/19T08:25:00' could not be parsed at index 0
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(Unknown Source)
+	at java.base/java.time.format.DateTimeFormatter.parse(Unknown Source)
+	at java.base/java.time.LocalDateTime.parse(Unknown Source)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:517)
+	... 21 more
+2024-01-11 17:08:17,193 : ERROR : KNIME-Worker-22-String to Date&Time 3:18 :  : Node : String to Date&Time : 3:18 : Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+    RowID      |   ..   | Customer_ID |  Invoice_time  |    Country    
+-----------------------------------------------------------------------
+Row0_Row114... | ..     | 13509       | D01/9/19T08... | United Kingdom
+                                       ^^^^^^^^^^^^^^^
+Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+org.knime.core.node.KNIMEException$KNIMERuntimeException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+	at org.knime.core.node.KNIMEException.toUnchecked(KNIMEException.java:145)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:544)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel.execute(StringToDateTimeNodeModel.java:338)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.core.node.KNIMEException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+	at org.knime.core.node.KNIMEException.of(KNIMEException.java:136)
+	... 22 more
+Caused by: java.time.format.DateTimeParseException: Text 'D01/9/19T08:25:00' could not be parsed at index 0
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(Unknown Source)
+	at java.base/java.time.format.DateTimeFormatter.parse(Unknown Source)
+	at java.base/java.time.LocalDateTime.parse(Unknown Source)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:517)
+	... 21 more
+2024-01-11 17:08:17,887 : ERROR : KNIME-Worker-23-String to Date&Time 3:18 :  : Node : String to Date&Time : 3:18 : Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+    RowID      |   ..   | Customer_ID |  Invoice_time  |    Country    
+-----------------------------------------------------------------------
+Row0_Row114... | ..     | 13509       | D01/9/19T08... | United Kingdom
+                                       ^^^^^^^^^^^^^^^
+Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+org.knime.core.node.KNIMEException$KNIMERuntimeException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+	at org.knime.core.node.KNIMEException.toUnchecked(KNIMEException.java:145)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:544)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel.execute(StringToDateTimeNodeModel.java:338)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.core.node.KNIMEException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+	at org.knime.core.node.KNIMEException.of(KNIMEException.java:136)
+	... 22 more
+Caused by: java.time.format.DateTimeParseException: Text 'D01/9/19T08:25:00' could not be parsed at index 0
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(Unknown Source)
+	at java.base/java.time.format.DateTimeFormatter.parse(Unknown Source)
+	at java.base/java.time.LocalDateTime.parse(Unknown Source)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:517)
+	... 21 more
+2024-01-11 17:08:18,790 : ERROR : KNIME-Worker-21-String to Date&Time 3:18 :  : Node : String to Date&Time : 3:18 : Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+    RowID      |   ..   | Customer_ID |  Invoice_time  |    Country    
+-----------------------------------------------------------------------
+Row0_Row114... | ..     | 13509       | D01/9/19T08... | United Kingdom
+                                       ^^^^^^^^^^^^^^^
+Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+org.knime.core.node.KNIMEException$KNIMERuntimeException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+	at org.knime.core.node.KNIMEException.toUnchecked(KNIMEException.java:145)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:544)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel.execute(StringToDateTimeNodeModel.java:338)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.core.node.KNIMEException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+	at org.knime.core.node.KNIMEException.of(KNIMEException.java:136)
+	... 22 more
+Caused by: java.time.format.DateTimeParseException: Text 'D01/9/19T08:25:00' could not be parsed at index 0
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(Unknown Source)
+	at java.base/java.time.format.DateTimeFormatter.parse(Unknown Source)
+	at java.base/java.time.LocalDateTime.parse(Unknown Source)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:517)
+	... 21 more
+2024-01-11 17:08:26,457 : ERROR : KNIME-Worker-22-String to Date&Time 3:18 :  : Node : String to Date&Time : 3:18 : Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+    RowID      |   ..   | Customer_ID |  Invoice_time  |    Country    
+-----------------------------------------------------------------------
+Row0_Row114... | ..     | 13509       | D01/9/19T08... | United Kingdom
+                                       ^^^^^^^^^^^^^^^
+Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+org.knime.core.node.KNIMEException$KNIMERuntimeException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+	at org.knime.core.node.KNIMEException.toUnchecked(KNIMEException.java:145)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:544)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel.execute(StringToDateTimeNodeModel.java:338)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.core.node.KNIMEException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+	at org.knime.core.node.KNIMEException.of(KNIMEException.java:136)
+	... 22 more
+Caused by: java.time.format.DateTimeParseException: Text 'D01/9/19T08:25:00' could not be parsed at index 0
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(Unknown Source)
+	at java.base/java.time.format.DateTimeFormatter.parse(Unknown Source)
+	at java.base/java.time.LocalDateTime.parse(Unknown Source)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:517)
+	... 21 more
+2024-01-11 17:08:28,544 : ERROR : KNIME-Worker-23-String to Date&Time 3:18 :  : Node : String to Date&Time : 3:18 : Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+    RowID      |   ..   | Customer_ID |  Invoice_time  |    Country    
+-----------------------------------------------------------------------
+Row0_Row114... | ..     | 13509       | D01/9/19T08... | United Kingdom
+                                       ^^^^^^^^^^^^^^^
+Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+org.knime.core.node.KNIMEException$KNIMERuntimeException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+	at org.knime.core.node.KNIMEException.toUnchecked(KNIMEException.java:145)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:544)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel.execute(StringToDateTimeNodeModel.java:338)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.core.node.KNIMEException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+	at org.knime.core.node.KNIMEException.of(KNIMEException.java:136)
+	... 22 more
+Caused by: java.time.format.DateTimeParseException: Text 'D01/9/19T08:25:00' could not be parsed at index 0
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(Unknown Source)
+	at java.base/java.time.format.DateTimeFormatter.parse(Unknown Source)
+	at java.base/java.time.LocalDateTime.parse(Unknown Source)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:517)
+	... 21 more
+2024-01-11 17:09:07,068 : ERROR : KNIME-Worker-21-String to Date&Time 3:18 :  : Node : String to Date&Time : 3:18 : Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+    RowID      |   ..   | Customer_ID |  Invoice_time  |    Country    
+-----------------------------------------------------------------------
+Row0_Row114... | ..     | 13509       | D01/9/19T08... | United Kingdom
+                                       ^^^^^^^^^^^^^^^
+Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+org.knime.core.node.KNIMEException$KNIMERuntimeException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+	at org.knime.core.node.KNIMEException.toUnchecked(KNIMEException.java:145)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:544)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel.execute(StringToDateTimeNodeModel.java:338)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.core.node.KNIMEException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+	at org.knime.core.node.KNIMEException.of(KNIMEException.java:136)
+	... 22 more
+Caused by: java.time.format.DateTimeParseException: Text 'D01/9/19T08:25:00' could not be parsed at index 6
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(Unknown Source)
+	at java.base/java.time.format.DateTimeFormatter.parse(Unknown Source)
+	at java.base/java.time.LocalDateTime.parse(Unknown Source)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:517)
+	... 21 more
+2024-01-11 17:09:08,595 : ERROR : KNIME-Worker-22-String to Date&Time 3:18 :  : Node : String to Date&Time : 3:18 : Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+    RowID      |   ..   | Customer_ID |  Invoice_time  |    Country    
+-----------------------------------------------------------------------
+Row0_Row114... | ..     | 13509       | D01/9/19T08... | United Kingdom
+                                       ^^^^^^^^^^^^^^^
+Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+org.knime.core.node.KNIMEException$KNIMERuntimeException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+	at org.knime.core.node.KNIMEException.toUnchecked(KNIMEException.java:145)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:544)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel.execute(StringToDateTimeNodeModel.java:338)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.core.node.KNIMEException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+	at org.knime.core.node.KNIMEException.of(KNIMEException.java:136)
+	... 22 more
+Caused by: java.time.format.DateTimeParseException: Text 'D01/9/19T08:25:00' could not be parsed at index 6
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(Unknown Source)
+	at java.base/java.time.format.DateTimeFormatter.parse(Unknown Source)
+	at java.base/java.time.LocalDateTime.parse(Unknown Source)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:517)
+	... 21 more
+2024-01-11 17:09:09,526 : ERROR : KNIME-Worker-23-String to Date&Time 3:18 :  : Node : String to Date&Time : 3:18 : Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+    RowID      |   ..   | Customer_ID |  Invoice_time  |    Country    
+-----------------------------------------------------------------------
+Row0_Row114... | ..     | 13509       | D01/9/19T08... | United Kingdom
+                                       ^^^^^^^^^^^^^^^
+Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+org.knime.core.node.KNIMEException$KNIMERuntimeException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+	at org.knime.core.node.KNIMEException.toUnchecked(KNIMEException.java:145)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:544)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel.execute(StringToDateTimeNodeModel.java:338)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.core.node.KNIMEException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+	at org.knime.core.node.KNIMEException.of(KNIMEException.java:136)
+	... 22 more
+Caused by: java.time.format.DateTimeParseException: Text 'D01/9/19T08:25:00' could not be parsed at index 6
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(Unknown Source)
+	at java.base/java.time.format.DateTimeFormatter.parse(Unknown Source)
+	at java.base/java.time.LocalDateTime.parse(Unknown Source)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:517)
+	... 21 more
+2024-01-11 17:09:09,667 : ERROR : KNIME-Worker-21-String to Date&Time 3:18 :  : Node : String to Date&Time : 3:18 : Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+    RowID      |   ..   | Customer_ID |  Invoice_time  |    Country    
+-----------------------------------------------------------------------
+Row0_Row114... | ..     | 13509       | D01/9/19T08... | United Kingdom
+                                       ^^^^^^^^^^^^^^^
+Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+org.knime.core.node.KNIMEException$KNIMERuntimeException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+	at org.knime.core.node.KNIMEException.toUnchecked(KNIMEException.java:145)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:544)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel.execute(StringToDateTimeNodeModel.java:338)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.core.node.KNIMEException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+	at org.knime.core.node.KNIMEException.of(KNIMEException.java:136)
+	... 22 more
+Caused by: java.time.format.DateTimeParseException: Text 'D01/9/19T08:25:00' could not be parsed at index 6
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(Unknown Source)
+	at java.base/java.time.format.DateTimeFormatter.parse(Unknown Source)
+	at java.base/java.time.LocalDateTime.parse(Unknown Source)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:517)
+	... 21 more
+2024-01-11 17:09:09,882 : ERROR : KNIME-Worker-22-String to Date&Time 3:18 :  : Node : String to Date&Time : 3:18 : Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+    RowID      |   ..   | Customer_ID |  Invoice_time  |    Country    
+-----------------------------------------------------------------------
+Row0_Row114... | ..     | 13509       | D01/9/19T08... | United Kingdom
+                                       ^^^^^^^^^^^^^^^
+Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+org.knime.core.node.KNIMEException$KNIMERuntimeException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+	at org.knime.core.node.KNIMEException.toUnchecked(KNIMEException.java:145)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:544)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel.execute(StringToDateTimeNodeModel.java:338)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.core.node.KNIMEException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+	at org.knime.core.node.KNIMEException.of(KNIMEException.java:136)
+	... 22 more
+Caused by: java.time.format.DateTimeParseException: Text 'D01/9/19T08:25:00' could not be parsed at index 6
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(Unknown Source)
+	at java.base/java.time.format.DateTimeFormatter.parse(Unknown Source)
+	at java.base/java.time.LocalDateTime.parse(Unknown Source)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:517)
+	... 21 more
+2024-01-11 17:09:10,072 : ERROR : KNIME-Worker-23-String to Date&Time 3:18 :  : Node : String to Date&Time : 3:18 : Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+    RowID      |   ..   | Customer_ID |  Invoice_time  |    Country    
+-----------------------------------------------------------------------
+Row0_Row114... | ..     | 13509       | D01/9/19T08... | United Kingdom
+                                       ^^^^^^^^^^^^^^^
+Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+org.knime.core.node.KNIMEException$KNIMERuntimeException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+	at org.knime.core.node.KNIMEException.toUnchecked(KNIMEException.java:145)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:544)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel.execute(StringToDateTimeNodeModel.java:338)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.core.node.KNIMEException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+	at org.knime.core.node.KNIMEException.of(KNIMEException.java:136)
+	... 22 more
+Caused by: java.time.format.DateTimeParseException: Text 'D01/9/19T08:25:00' could not be parsed at index 6
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(Unknown Source)
+	at java.base/java.time.format.DateTimeFormatter.parse(Unknown Source)
+	at java.base/java.time.LocalDateTime.parse(Unknown Source)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:517)
+	... 21 more
+2024-01-11 17:09:14,221 : ERROR : KNIME-Worker-21-String to Date&Time 3:18 :  : Node : String to Date&Time : 3:18 : Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+    RowID      |   ..   | Customer_ID |  Invoice_time  |    Country    
+-----------------------------------------------------------------------
+Row0_Row114... | ..     | 13509       | D01/9/19T08... | United Kingdom
+                                       ^^^^^^^^^^^^^^^
+Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+org.knime.core.node.KNIMEException$KNIMERuntimeException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+	at org.knime.core.node.KNIMEException.toUnchecked(KNIMEException.java:145)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:544)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel.execute(StringToDateTimeNodeModel.java:338)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.core.node.KNIMEException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+	at org.knime.core.node.KNIMEException.of(KNIMEException.java:136)
+	... 22 more
+Caused by: java.time.format.DateTimeParseException: Text 'D01/9/19T08:25:00' could not be parsed at index 6
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(Unknown Source)
+	at java.base/java.time.format.DateTimeFormatter.parse(Unknown Source)
+	at java.base/java.time.LocalDateTime.parse(Unknown Source)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:517)
+	... 21 more
+2024-01-11 17:09:15,035 : ERROR : KNIME-Worker-22-String to Date&Time 3:18 :  : Node : String to Date&Time : 3:18 : Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+    RowID      |   ..   | Customer_ID |  Invoice_time  |    Country    
+-----------------------------------------------------------------------
+Row0_Row114... | ..     | 13509       | D01/9/19T08... | United Kingdom
+                                       ^^^^^^^^^^^^^^^
+Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+org.knime.core.node.KNIMEException$KNIMERuntimeException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+	at org.knime.core.node.KNIMEException.toUnchecked(KNIMEException.java:145)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:544)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel.execute(StringToDateTimeNodeModel.java:338)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.core.node.KNIMEException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+	at org.knime.core.node.KNIMEException.of(KNIMEException.java:136)
+	... 22 more
+Caused by: java.time.format.DateTimeParseException: Text 'D01/9/19T08:25:00' could not be parsed at index 6
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(Unknown Source)
+	at java.base/java.time.format.DateTimeFormatter.parse(Unknown Source)
+	at java.base/java.time.LocalDateTime.parse(Unknown Source)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:517)
+	... 21 more
+2024-01-11 17:09:15,526 : ERROR : KNIME-Worker-23-String to Date&Time 3:18 :  : Node : String to Date&Time : 3:18 : Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+    RowID      |   ..   | Customer_ID |  Invoice_time  |    Country    
+-----------------------------------------------------------------------
+Row0_Row114... | ..     | 13509       | D01/9/19T08... | United Kingdom
+                                       ^^^^^^^^^^^^^^^
+Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+org.knime.core.node.KNIMEException$KNIMERuntimeException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+	at org.knime.core.node.KNIMEException.toUnchecked(KNIMEException.java:145)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:544)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel.execute(StringToDateTimeNodeModel.java:338)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.core.node.KNIMEException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+	at org.knime.core.node.KNIMEException.of(KNIMEException.java:136)
+	... 22 more
+Caused by: java.time.format.DateTimeParseException: Text 'D01/9/19T08:25:00' could not be parsed at index 6
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(Unknown Source)
+	at java.base/java.time.format.DateTimeFormatter.parse(Unknown Source)
+	at java.base/java.time.LocalDateTime.parse(Unknown Source)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:517)
+	... 21 more
+2024-01-11 17:09:16,150 : ERROR : KNIME-Worker-21-String to Date&Time 3:18 :  : Node : String to Date&Time : 3:18 : Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+    RowID      |   ..   | Customer_ID |  Invoice_time  |    Country    
+-----------------------------------------------------------------------
+Row0_Row114... | ..     | 13509       | D01/9/19T08... | United Kingdom
+                                       ^^^^^^^^^^^^^^^
+Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+org.knime.core.node.KNIMEException$KNIMERuntimeException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+	at org.knime.core.node.KNIMEException.toUnchecked(KNIMEException.java:145)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:544)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel.execute(StringToDateTimeNodeModel.java:338)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.core.node.KNIMEException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+	at org.knime.core.node.KNIMEException.of(KNIMEException.java:136)
+	... 22 more
+Caused by: java.time.format.DateTimeParseException: Text 'D01/9/19T08:25:00' could not be parsed at index 6
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(Unknown Source)
+	at java.base/java.time.format.DateTimeFormatter.parse(Unknown Source)
+	at java.base/java.time.LocalDateTime.parse(Unknown Source)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:517)
+	... 21 more
+2024-01-11 17:09:17,044 : ERROR : KNIME-Worker-22-String to Date&Time 3:18 :  : Node : String to Date&Time : 3:18 : Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+    RowID      |   ..   | Customer_ID |  Invoice_time  |    Country    
+-----------------------------------------------------------------------
+Row0_Row114... | ..     | 13509       | D01/9/19T08... | United Kingdom
+                                       ^^^^^^^^^^^^^^^
+Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+org.knime.core.node.KNIMEException$KNIMERuntimeException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+	at org.knime.core.node.KNIMEException.toUnchecked(KNIMEException.java:145)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:544)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel.execute(StringToDateTimeNodeModel.java:338)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.core.node.KNIMEException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+	at org.knime.core.node.KNIMEException.of(KNIMEException.java:136)
+	... 22 more
+Caused by: java.time.format.DateTimeParseException: Text 'D01/9/19T08:25:00' could not be parsed at index 6
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(Unknown Source)
+	at java.base/java.time.format.DateTimeFormatter.parse(Unknown Source)
+	at java.base/java.time.LocalDateTime.parse(Unknown Source)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:517)
+	... 21 more
+2024-01-11 17:09:32,801 : ERROR : KNIME-Worker-23-String to Date&Time 3:18 :  : Node : String to Date&Time : 3:18 : Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+    RowID      |   ..   | Customer_ID |  Invoice_time  |    Country    
+-----------------------------------------------------------------------
+Row0_Row114... | ..     | 13509       | D01/9/19T08... | United Kingdom
+                                       ^^^^^^^^^^^^^^^
+Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+org.knime.core.node.KNIMEException$KNIMERuntimeException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+	at org.knime.core.node.KNIMEException.toUnchecked(KNIMEException.java:145)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:544)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel.execute(StringToDateTimeNodeModel.java:338)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.core.node.KNIMEException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+	at org.knime.core.node.KNIMEException.of(KNIMEException.java:136)
+	... 22 more
+Caused by: java.time.format.DateTimeParseException: Text 'D01/9/19T08:25:00' could not be parsed at index 0
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(Unknown Source)
+	at java.base/java.time.format.DateTimeFormatter.parse(Unknown Source)
+	at java.base/java.time.LocalDateTime.parse(Unknown Source)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:517)
+	... 21 more
+2024-01-11 17:09:33,609 : ERROR : KNIME-Worker-21-String to Date&Time 3:18 :  : Node : String to Date&Time : 3:18 : Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+    RowID      |   ..   | Customer_ID |  Invoice_time  |    Country    
+-----------------------------------------------------------------------
+Row0_Row114... | ..     | 13509       | D01/9/19T08... | United Kingdom
+                                       ^^^^^^^^^^^^^^^
+Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+org.knime.core.node.KNIMEException$KNIMERuntimeException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+	at org.knime.core.node.KNIMEException.toUnchecked(KNIMEException.java:145)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:544)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel.execute(StringToDateTimeNodeModel.java:338)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.core.node.KNIMEException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+	at org.knime.core.node.KNIMEException.of(KNIMEException.java:136)
+	... 22 more
+Caused by: java.time.format.DateTimeParseException: Text 'D01/9/19T08:25:00' could not be parsed at index 0
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(Unknown Source)
+	at java.base/java.time.format.DateTimeFormatter.parse(Unknown Source)
+	at java.base/java.time.LocalDateTime.parse(Unknown Source)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:517)
+	... 21 more
+2024-01-11 17:09:33,821 : ERROR : KNIME-Worker-22-String to Date&Time 3:18 :  : Node : String to Date&Time : 3:18 : Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+    RowID      |   ..   | Customer_ID |  Invoice_time  |    Country    
+-----------------------------------------------------------------------
+Row0_Row114... | ..     | 13509       | D01/9/19T08... | United Kingdom
+                                       ^^^^^^^^^^^^^^^
+Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+org.knime.core.node.KNIMEException$KNIMERuntimeException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+	at org.knime.core.node.KNIMEException.toUnchecked(KNIMEException.java:145)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:544)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel.execute(StringToDateTimeNodeModel.java:338)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.core.node.KNIMEException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+	at org.knime.core.node.KNIMEException.of(KNIMEException.java:136)
+	... 22 more
+Caused by: java.time.format.DateTimeParseException: Text 'D01/9/19T08:25:00' could not be parsed at index 0
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(Unknown Source)
+	at java.base/java.time.format.DateTimeFormatter.parse(Unknown Source)
+	at java.base/java.time.LocalDateTime.parse(Unknown Source)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:517)
+	... 21 more
+2024-01-11 17:09:33,952 : ERROR : KNIME-Worker-23-String to Date&Time 3:18 :  : Node : String to Date&Time : 3:18 : Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+    RowID      |   ..   | Customer_ID |  Invoice_time  |    Country    
+-----------------------------------------------------------------------
+Row0_Row114... | ..     | 13509       | D01/9/19T08... | United Kingdom
+                                       ^^^^^^^^^^^^^^^
+Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+org.knime.core.node.KNIMEException$KNIMERuntimeException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+	at org.knime.core.node.KNIMEException.toUnchecked(KNIMEException.java:145)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:544)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel.execute(StringToDateTimeNodeModel.java:338)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.core.node.KNIMEException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+	at org.knime.core.node.KNIMEException.of(KNIMEException.java:136)
+	... 22 more
+Caused by: java.time.format.DateTimeParseException: Text 'D01/9/19T08:25:00' could not be parsed at index 0
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(Unknown Source)
+	at java.base/java.time.format.DateTimeFormatter.parse(Unknown Source)
+	at java.base/java.time.LocalDateTime.parse(Unknown Source)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:517)
+	... 21 more
+2024-01-11 17:11:01,485 : ERROR : KNIME-Worker-21-String to Date&Time 3:18 :  : Node : String to Date&Time : 3:18 : Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+    RowID      |   ..   | Customer_ID |  Invoice_time  |    Country    
+-----------------------------------------------------------------------
+Row0_Row114... | ..     | 13509       | D01/9/19T08... | United Kingdom
+                                       ^^^^^^^^^^^^^^^
+Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+org.knime.core.node.KNIMEException$KNIMERuntimeException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+	at org.knime.core.node.KNIMEException.toUnchecked(KNIMEException.java:145)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:544)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel.execute(StringToDateTimeNodeModel.java:338)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.core.node.KNIMEException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+	at org.knime.core.node.KNIMEException.of(KNIMEException.java:136)
+	... 22 more
+Caused by: java.time.format.DateTimeParseException: Text 'D01/9/19T08:25:00' could not be parsed at index 0
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(Unknown Source)
+	at java.base/java.time.format.DateTimeFormatter.parse(Unknown Source)
+	at java.base/java.time.LocalDateTime.parse(Unknown Source)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:517)
+	... 21 more
+2024-01-11 17:11:04,523 : ERROR : KNIME-Worker-24-String to Date&Time 3:18 :  : Node : String to Date&Time : 3:18 : Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+    RowID      |   ..   | Customer_ID |  Invoice_time  |    Country    
+-----------------------------------------------------------------------
+Row0_Row114... | ..     | 13509       | D01/9/19T08... | United Kingdom
+                                       ^^^^^^^^^^^^^^^
+Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+org.knime.core.node.KNIMEException$KNIMERuntimeException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+	at org.knime.core.node.KNIMEException.toUnchecked(KNIMEException.java:145)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:544)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel.execute(StringToDateTimeNodeModel.java:338)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.core.node.KNIMEException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+	at org.knime.core.node.KNIMEException.of(KNIMEException.java:136)
+	... 22 more
+Caused by: java.time.format.DateTimeParseException: Text 'D01/9/19T08:25:00' could not be parsed at index 0
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(Unknown Source)
+	at java.base/java.time.format.DateTimeFormatter.parse(Unknown Source)
+	at java.base/java.time.LocalDateTime.parse(Unknown Source)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:517)
+	... 21 more
+2024-01-11 17:11:05,288 : ERROR : KNIME-Worker-25-String to Date&Time 3:18 :  : Node : String to Date&Time : 3:18 : Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+    RowID      |   ..   | Customer_ID |  Invoice_time  |    Country    
+-----------------------------------------------------------------------
+Row0_Row114... | ..     | 13509       | D01/9/19T08... | United Kingdom
+                                       ^^^^^^^^^^^^^^^
+Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+org.knime.core.node.KNIMEException$KNIMERuntimeException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+	at org.knime.core.node.KNIMEException.toUnchecked(KNIMEException.java:145)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:544)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel.execute(StringToDateTimeNodeModel.java:338)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.core.node.KNIMEException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+	at org.knime.core.node.KNIMEException.of(KNIMEException.java:136)
+	... 22 more
+Caused by: java.time.format.DateTimeParseException: Text 'D01/9/19T08:25:00' could not be parsed at index 0
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(Unknown Source)
+	at java.base/java.time.format.DateTimeFormatter.parse(Unknown Source)
+	at java.base/java.time.LocalDateTime.parse(Unknown Source)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:517)
+	... 21 more
+2024-01-11 17:11:05,501 : ERROR : KNIME-Worker-21-String to Date&Time 3:18 :  : Node : String to Date&Time : 3:18 : Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+    RowID      |   ..   | Customer_ID |  Invoice_time  |    Country    
+-----------------------------------------------------------------------
+Row0_Row114... | ..     | 13509       | D01/9/19T08... | United Kingdom
+                                       ^^^^^^^^^^^^^^^
+Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+org.knime.core.node.KNIMEException$KNIMERuntimeException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+	at org.knime.core.node.KNIMEException.toUnchecked(KNIMEException.java:145)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:544)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel.execute(StringToDateTimeNodeModel.java:338)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.core.node.KNIMEException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+	at org.knime.core.node.KNIMEException.of(KNIMEException.java:136)
+	... 22 more
+Caused by: java.time.format.DateTimeParseException: Text 'D01/9/19T08:25:00' could not be parsed at index 0
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(Unknown Source)
+	at java.base/java.time.format.DateTimeFormatter.parse(Unknown Source)
+	at java.base/java.time.LocalDateTime.parse(Unknown Source)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:517)
+	... 21 more
+2024-01-11 17:11:15,893 : ERROR : KNIME-Worker-24-String to Date&Time 3:18 :  : Node : String to Date&Time : 3:18 : Could not parse date in cell [Row0_Row1143..., column "Invoice_time(Date&Time)", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+    RowID      |   ..   | Customer_ID |  Invoice_time  |    Country    
+-----------------------------------------------------------------------
+Row0_Row114... | ..     | 13509       | D01/9/19T08... | United Kingdom
+                                       ^^^^^^^^^^^^^^^
+Could not parse date in cell [Row0_Row1143..., column "Invoice_time(Date&Time)", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+org.knime.core.node.KNIMEException$KNIMERuntimeException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time(Date&Time)", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+	at org.knime.core.node.KNIMEException.toUnchecked(KNIMEException.java:145)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:544)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel.execute(StringToDateTimeNodeModel.java:338)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.core.node.KNIMEException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time(Date&Time)", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+	at org.knime.core.node.KNIMEException.of(KNIMEException.java:136)
+	... 22 more
+Caused by: java.time.format.DateTimeParseException: Text 'D01/9/19T08:25:00' could not be parsed at index 0
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(Unknown Source)
+	at java.base/java.time.format.DateTimeFormatter.parse(Unknown Source)
+	at java.base/java.time.LocalDateTime.parse(Unknown Source)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:517)
+	... 21 more
+2024-01-11 17:11:16,771 : ERROR : KNIME-Worker-25-String to Date&Time 3:18 :  : Node : String to Date&Time : 3:18 : Could not parse date in cell [Row0_Row1143..., column "Invoice_time(Date&Time)", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+    RowID      |   ..   | Customer_ID |  Invoice_time  |    Country    
+-----------------------------------------------------------------------
+Row0_Row114... | ..     | 13509       | D01/9/19T08... | United Kingdom
+                                       ^^^^^^^^^^^^^^^
+Could not parse date in cell [Row0_Row1143..., column "Invoice_time(Date&Time)", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+org.knime.core.node.KNIMEException$KNIMERuntimeException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time(Date&Time)", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+	at org.knime.core.node.KNIMEException.toUnchecked(KNIMEException.java:145)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:544)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel.execute(StringToDateTimeNodeModel.java:338)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.core.node.KNIMEException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time(Date&Time)", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+	at org.knime.core.node.KNIMEException.of(KNIMEException.java:136)
+	... 22 more
+Caused by: java.time.format.DateTimeParseException: Text 'D01/9/19T08:25:00' could not be parsed at index 0
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(Unknown Source)
+	at java.base/java.time.format.DateTimeFormatter.parse(Unknown Source)
+	at java.base/java.time.LocalDateTime.parse(Unknown Source)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:517)
+	... 21 more
+2024-01-11 17:11:16,944 : ERROR : KNIME-Worker-21-String to Date&Time 3:18 :  : Node : String to Date&Time : 3:18 : Could not parse date in cell [Row0_Row1143..., column "Invoice_time(Date&Time)", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+    RowID      |   ..   | Customer_ID |  Invoice_time  |    Country    
+-----------------------------------------------------------------------
+Row0_Row114... | ..     | 13509       | D01/9/19T08... | United Kingdom
+                                       ^^^^^^^^^^^^^^^
+Could not parse date in cell [Row0_Row1143..., column "Invoice_time(Date&Time)", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+org.knime.core.node.KNIMEException$KNIMERuntimeException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time(Date&Time)", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+	at org.knime.core.node.KNIMEException.toUnchecked(KNIMEException.java:145)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:544)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel.execute(StringToDateTimeNodeModel.java:338)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.core.node.KNIMEException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time(Date&Time)", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 0.
+	at org.knime.core.node.KNIMEException.of(KNIMEException.java:136)
+	... 22 more
+Caused by: java.time.format.DateTimeParseException: Text 'D01/9/19T08:25:00' could not be parsed at index 0
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(Unknown Source)
+	at java.base/java.time.format.DateTimeFormatter.parse(Unknown Source)
+	at java.base/java.time.LocalDateTime.parse(Unknown Source)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:517)
+	... 21 more
+2024-01-11 17:12:37,746 : WARN  : main :  : Node : String to Date&Time : 3:18 : Node must be configured.
+2024-01-11 17:13:36,229 : ERROR : KNIME-Worker-26-String to Date&Time 3:18 :  : Node : String to Date&Time : 3:18 : Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+    RowID      |   ..   | Customer_ID |  Invoice_time  |    Country    
+-----------------------------------------------------------------------
+Row0_Row114... | ..     | 13509       | D01/9/19T08... | United Kingdom
+                                       ^^^^^^^^^^^^^^^
+Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+org.knime.core.node.KNIMEException$KNIMERuntimeException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+	at org.knime.core.node.KNIMEException.toUnchecked(KNIMEException.java:145)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:544)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel.execute(StringToDateTimeNodeModel.java:338)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.core.node.KNIMEException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+	at org.knime.core.node.KNIMEException.of(KNIMEException.java:136)
+	... 22 more
+Caused by: java.time.format.DateTimeParseException: Text 'D01/9/19T08:25:00' could not be parsed at index 6
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(Unknown Source)
+	at java.base/java.time.format.DateTimeFormatter.parse(Unknown Source)
+	at java.base/java.time.LocalDateTime.parse(Unknown Source)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:517)
+	... 21 more
+2024-01-11 17:13:37,225 : ERROR : KNIME-Worker-27-String to Date&Time 3:18 :  : Node : String to Date&Time : 3:18 : Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+    RowID      |   ..   | Customer_ID |  Invoice_time  |    Country    
+-----------------------------------------------------------------------
+Row0_Row114... | ..     | 13509       | D01/9/19T08... | United Kingdom
+                                       ^^^^^^^^^^^^^^^
+Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+org.knime.core.node.KNIMEException$KNIMERuntimeException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+	at org.knime.core.node.KNIMEException.toUnchecked(KNIMEException.java:145)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:544)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel.execute(StringToDateTimeNodeModel.java:338)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.core.node.KNIMEException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+	at org.knime.core.node.KNIMEException.of(KNIMEException.java:136)
+	... 22 more
+Caused by: java.time.format.DateTimeParseException: Text 'D01/9/19T08:25:00' could not be parsed at index 6
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(Unknown Source)
+	at java.base/java.time.format.DateTimeFormatter.parse(Unknown Source)
+	at java.base/java.time.LocalDateTime.parse(Unknown Source)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:517)
+	... 21 more
+2024-01-11 17:15:14,055 : WARN  : KNIME-Worker-28-String to Date&Time 3:18 :  : Node : String to Date&Time : 3:18 : Problems in 672104 rows. First error: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+2024-01-11 17:15:14,055 : WARN  : KNIME-Worker-28-String to Date&Time 3:18 :  : Node : String to Date&Time : 3:18 : Problems in 672104 rows. First error: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+    RowID      |   ..   | Customer_ID |  Invoice_time  |    Country    
+-----------------------------------------------------------------------
+Row0_Row114... | ..     | 13509       | D01/9/19T08... | United Kingdom
+                                       ^^^^^^^^^^^^^^^
+Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+2024-01-11 17:15:38,375 : ERROR : KNIME-Worker-29-String to Date&Time 3:18 :  : Node : String to Date&Time : 3:18 : Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+    RowID      |   ..   | Customer_ID |  Invoice_time  |    Country    
+-----------------------------------------------------------------------
+Row0_Row114... | ..     | 13509       | D01/9/19T08... | United Kingdom
+                                       ^^^^^^^^^^^^^^^
+Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+org.knime.core.node.KNIMEException$KNIMERuntimeException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+	at org.knime.core.node.KNIMEException.toUnchecked(KNIMEException.java:145)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:544)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel.execute(StringToDateTimeNodeModel.java:338)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.core.node.KNIMEException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+	at org.knime.core.node.KNIMEException.of(KNIMEException.java:136)
+	... 22 more
+Caused by: java.time.format.DateTimeParseException: Text 'D01/9/19T08:25:00' could not be parsed at index 6
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(Unknown Source)
+	at java.base/java.time.format.DateTimeFormatter.parse(Unknown Source)
+	at java.base/java.time.LocalDateTime.parse(Unknown Source)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:517)
+	... 21 more
+2024-01-11 17:16:23,596 : ERROR : KNIME-Worker-30-String to Date&Time 3:18 :  : Node : String to Date&Time : 3:18 : Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+    RowID      |   ..   | Customer_ID |  Invoice_time  |    Country    
+-----------------------------------------------------------------------
+Row0_Row114... | ..     | 13509       | D01/9/19T08... | United Kingdom
+                                       ^^^^^^^^^^^^^^^
+Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+org.knime.core.node.KNIMEException$KNIMERuntimeException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+	at org.knime.core.node.KNIMEException.toUnchecked(KNIMEException.java:145)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:544)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel.execute(StringToDateTimeNodeModel.java:338)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.core.node.KNIMEException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+	at org.knime.core.node.KNIMEException.of(KNIMEException.java:136)
+	... 22 more
+Caused by: java.time.format.DateTimeParseException: Text 'D01/9/19T08:25:00' could not be parsed at index 6
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(Unknown Source)
+	at java.base/java.time.format.DateTimeFormatter.parse(Unknown Source)
+	at java.base/java.time.LocalDateTime.parse(Unknown Source)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:517)
+	... 21 more
+2024-01-11 17:17:57,464 : ERROR : KNIME-Worker-31-String to Date&Time 3:18 :  : Node : String to Date&Time : 3:18 : Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+    RowID      |   ..   | Customer_ID |  Invoice_time  |    Country    
+-----------------------------------------------------------------------
+Row0_Row114... | ..     | 13509       | D01/9/19T08... | United Kingdom
+                                       ^^^^^^^^^^^^^^^
+Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+org.knime.core.node.KNIMEException$KNIMERuntimeException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+	at org.knime.core.node.KNIMEException.toUnchecked(KNIMEException.java:145)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:544)
+	at org.knime.core.data.container.SingleCellFactory.getCells(SingleCellFactory.java:105)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewCellsForRow(RearrangeColumnsTable.java:565)
+	at org.knime.core.data.container.RearrangeColumnsTable.calcNewColsSynchronously(RearrangeColumnsTable.java:484)
+	at org.knime.core.data.container.RearrangeColumnsTable.create(RearrangeColumnsTable.java:412)
+	at org.knime.core.data.container.BufferedTableBackend.rearrange(BufferedTableBackend.java:207)
+	at org.knime.core.node.ExecutionContext.createColumnRearrangeTable(ExecutionContext.java:466)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel.execute(StringToDateTimeNodeModel.java:338)
+	at org.knime.core.node.NodeModel.execute(NodeModel.java:811)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: org.knime.core.node.KNIMEException: Could not parse date in cell [Row0_Row1143..., column "Invoice_time", row 1]: Text 'D01/9/19T08:25:00' could not be parsed at index 6.
+	at org.knime.core.node.KNIMEException.of(KNIMEException.java:136)
+	... 22 more
+Caused by: java.time.format.DateTimeParseException: Text 'D01/9/19T08:25:00' could not be parsed at index 6
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(Unknown Source)
+	at java.base/java.time.format.DateTimeFormatter.parse(Unknown Source)
+	at java.base/java.time.LocalDateTime.parse(Unknown Source)
+	at org.knime.time.node.convert.stringtodatetime.StringToDateTimeNodeModel$StringToTimeCellFactory.getCell(StringToDateTimeNodeModel.java:517)
+	... 21 more
+2024-01-11 17:55:47,022 : WARN  : comm-pool-thread-14 :  : Node : Date&Time-based Row Filter : 3:19 : The node was not configured yet.
+2024-01-12 14:44:28,230 : WARN  : main :  : Node : GroupBy : 3:22 : No aggregation column defined
+2024-01-12 14:44:30,073 : WARN  : main :  : Node : GroupBy : 3:22 : No aggregation column defined
+2024-01-12 14:46:00,587 : WARN  : main :  : Node : GroupBy : 3:22 : No grouping column included. Aggregate complete table.
+2024-01-12 14:46:01,211 : WARN  : main :  : Node : GroupBy : 3:22 : No grouping column included. Aggregate complete table.
+2024-01-12 14:46:02,997 : WARN  : main :  : Node : GroupBy : 3:22 : No grouping column included. Aggregate complete table.
+2024-01-12 14:46:32,451 : WARN  : main :  : Node : GroupBy : 3:22 : No grouping column included. Aggregate complete table.
+2024-01-12 14:46:33,746 : WARN  : main :  : Node : GroupBy : 3:22 : No grouping column included. Aggregate complete table.
+2024-01-12 14:46:49,173 : WARN  : main :  : Node : GroupBy : 3:22 : No grouping column included. Aggregate complete table.
+2024-01-12 14:46:52,127 : WARN  : main :  : Node : GroupBy : 3:22 : No grouping column included. Aggregate complete table.
+2024-01-12 14:50:21,989 : WARN  : comm-pool-thread-21 :  : Node : Math Formula : 3:24 : No configuration available
+2024-01-12 14:52:37,058 : WARN  : comm-pool-thread-21 :  : Node : Math Formula : 3:24 : No configuration available
+2024-01-12 14:52:38,528 : WARN  : comm-pool-thread-21 :  : Node : Math Formula : 3:24 : No configuration available
+2024-01-12 14:54:36,149 : WARN  : comm-pool-thread-23 :  : Node : Math Formula : 3:24 : No configuration available
+2024-01-12 14:54:37,855 : WARN  : comm-pool-thread-23 :  : Node : Math Formula : 3:24 : No configuration available
+2024-01-12 14:55:38,971 : WARN  : main :  : Node : Math Formula : 3:24 : No configuration available
+2024-01-12 14:55:39,997 : WARN  : main :  : Node : Math Formula : 3:24 : No configuration available
+2024-01-12 14:55:41,380 : WARN  : KNIME-Worker-43-GroupBy 3:20 :  : Node : Math Formula : 3:24 : No configuration available
+2024-01-12 14:57:02,732 : WARN  : main :  : Node : Math Formula : 3:24 : No configuration available
+2024-01-12 14:57:05,035 : WARN  : KNIME-Worker-44-GroupBy 3:20 :  : Node : Math Formula : 3:24 : No configuration available
+2024-01-12 14:57:29,373 : WARN  : main :  : Node : Math Formula : 3:24 : No configuration available
+2024-01-12 14:57:31,213 : WARN  : main :  : Node : Math Formula : 3:24 : No configuration available
+2024-01-12 14:57:31,997 : WARN  : KNIME-Worker-45-GroupBy 3:20 :  : Node : Math Formula : 3:24 : No configuration available
+2024-01-12 14:58:08,097 : WARN  : main :  : Node : Math Formula : 3:24 : No configuration available
+2024-01-12 14:58:09,265 : WARN  : main :  : Node : Math Formula : 3:24 : No configuration available
+2024-01-12 14:58:10,363 : WARN  : KNIME-Worker-46-GroupBy 3:20 :  : Node : GroupBy : 3:20 : Skipped group(s): Price groups: "Accessories, Air fragances, Hobbies, ..." cause: "Group contains too many values"
+2024-01-12 14:58:10,363 : WARN  : KNIME-Worker-46-GroupBy 3:20 :  : Node : Math Formula : 3:24 : No configuration available
+2024-01-12 14:58:34,571 : WARN  : main :  : Node : Math Formula : 3:24 : No configuration available
+2024-01-12 14:58:35,691 : WARN  : main :  : Node : Math Formula : 3:24 : No configuration available
+2024-01-12 14:58:36,614 : WARN  : KNIME-Worker-47-GroupBy 3:20 :  : Node : Math Formula : 3:24 : No configuration available
+2024-01-12 14:58:53,313 : WARN  : main :  : Node : Math Formula : 3:24 : No configuration available
+2024-01-12 14:58:53,939 : WARN  : main :  : Node : Math Formula : 3:24 : No configuration available
+2024-01-12 14:58:54,970 : WARN  : KNIME-Worker-45-GroupBy 3:20 :  : Node : GroupBy : 3:20 : Skipped group(s): Price groups: "Accessories, Air fragances, Hobbies, ..." cause: "Group contains too many values"
+2024-01-12 14:58:54,971 : WARN  : KNIME-Worker-45-GroupBy 3:20 :  : Node : Math Formula : 3:24 : No configuration available
+2024-01-12 14:59:33,800 : WARN  : main :  : Node : Math Formula : 3:24 : No configuration available
+2024-01-12 14:59:37,908 : WARN  : KNIME-Worker-46-GroupBy 3:20 :  : Node : Math Formula : 3:24 : No configuration available
+2024-01-12 15:01:02,956 : WARN  : main :  : Node : Math Formula : 3:24 : No configuration available
+2024-01-12 15:01:03,738 : WARN  : main :  : Node : Math Formula : 3:24 : No configuration available
+2024-01-12 15:01:04,409 : WARN  : KNIME-Worker-48-GroupBy 3:20 :  : Node : Math Formula : 3:24 : No configuration available
+2024-01-12 15:11:17,797 : WARN  : comm-pool-thread-31 :  : Node : Excel Writer : 3:25 : Please specify a file
+2024-01-12 18:06:06,161 : WARN  : comm-pool-thread-37 :  : Node : GroupBy : 3:22 : No grouping column included. Aggregate complete table.
+2024-01-12 18:06:15,766 : WARN  : KNIME-Worker-58-String to Date&Time 3:18 :  : Node : GroupBy : 3:22 : No grouping column included. Aggregate complete table.
+2024-01-12 18:06:18,905 : WARN  : KNIME-Worker-59-Date&Time-based Row Filter 3:19 :  : Node : GroupBy : 3:22 : No grouping column included. Aggregate complete table.
+2024-01-12 18:06:19,302 : ERROR : KNIME-Worker-60-Excel Writer 3:25 :  : Node : Excel Writer : 3:25 : Execute failed: Output file '/Users/vanpham/Desktop/Knime Data/StudyCase chapter 3.xlsx' exists and must not be overwritten due to user settings.
+java.io.IOException: Output file '/Users/vanpham/Desktop/Knime Data/StudyCase chapter 3.xlsx' exists and must not be overwritten due to user settings.
+	at org.knime.ext.poi3.node.io.filehandling.excel.writer.ExcelTableWriterNodeModel.getWorkbookHandler(ExcelTableWriterNodeModel.java:266)
+	at org.knime.ext.poi3.node.io.filehandling.excel.writer.ExcelTableWriterNodeModel.write(ExcelTableWriterNodeModel.java:191)
+	at org.knime.ext.poi3.node.io.filehandling.excel.writer.ExcelTableWriterNodeModel.execute(ExcelTableWriterNodeModel.java:159)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2024-01-12 18:06:21,588 : WARN  : comm-pool-thread-37 :  : Node : Extract Date&Time Fields : 3:26 : Node must be configured.
+2024-01-12 18:08:17,391 : WARN  : comm-pool-thread-37 :  : Node : Pivot : 3:27 : No pivot columns selected.
+2024-01-12 18:21:01,229 : WARN  : main :  : Node : Image Writer (Port) : 3:29 : Please specify a file
+2024-01-13 23:43:11,246 : WARN  : comm-pool-thread-52 :  : Node : Partitioning : 4:3 : No sampling method selected
+2024-01-14 22:01:38,653 : WARN  : comm-pool-thread-60 :  : Node : Numeric Scorer : 4:6 : No columns selected for reference
+2024-01-14 22:25:26,937 : WARN  : main :  : Node : Row Filter : 4:9 : No row filter specified
+2024-01-14 22:26:09,249 : WARN  : main :  : Node : GroupBy : 4:9 : No grouping column included. Aggregate complete table.
+2024-01-14 22:26:09,249 : WARN  : main :  : Node : GroupBy : 4:9 : No aggregation column defined
+2024-01-14 22:26:09,249 : WARN  : main :  : Node : GroupBy : 4:9 : Please select at least one group or aggregation column
+2024-01-14 22:26:45,321 : WARN  : main :  : Node : GroupBy : 4:9 : No aggregation column defined
+2024-01-14 22:26:45,881 : WARN  : main :  : Node : GroupBy : 4:9 : No aggregation column defined
+2024-01-14 22:28:15,752 : ERROR : main :  : NodeSettingsToJsonFormsSettings : Value Lookup : 4:9 : Failed to load settings ('String for key "lookupCol" not found.'). New settings are created for the dialog.
+org.knime.core.node.InvalidSettingsException: String for key "lookupCol" not found.
+	at org.knime.core.node.config.base.ConfigBase.getString(ConfigBase.java:410)
+	at jdk.internal.reflect.GeneratedMethodAccessor306.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.knime.core.webui.node.dialog.NodeAndVariableSettingsProxy.lambda$1(NodeAndVariableSettingsProxy.java:94)
+	at org.knime.core.webui.node.dialog.$Proxy73.getString(Unknown Source)
+	at org.knime.core.webui.node.dialog.defaultdialog.persistence.field.DefaultFieldNodeSettingsPersistorFactory$PersistorImpl.load(DefaultFieldNodeSettingsPersistorFactory.java:154)
+	at org.knime.core.webui.node.dialog.defaultdialog.persistence.field.DefaultFieldNodeSettingsPersistor.load(DefaultFieldNodeSettingsPersistor.java:78)
+	at org.knime.core.webui.node.dialog.defaultdialog.persistence.field.FieldBasedNodeSettingsPersistor.lambda$2(FieldBasedNodeSettingsPersistor.java:113)
+	at org.knime.core.webui.node.dialog.defaultdialog.persistence.field.FieldBasedNodeSettingsPersistor.useBlackMagicToAccessFields(FieldBasedNodeSettingsPersistor.java:124)
+	at org.knime.core.webui.node.dialog.defaultdialog.persistence.field.FieldBasedNodeSettingsPersistor.load(FieldBasedNodeSettingsPersistor.java:113)
+	at org.knime.core.webui.node.dialog.defaultdialog.persistence.field.FieldBasedNodeSettingsPersistor.load(FieldBasedNodeSettingsPersistor.java:1)
+	at org.knime.core.webui.node.dialog.defaultdialog.DefaultNodeSettings.loadSettings(DefaultNodeSettings.java:370)
+	at org.knime.core.webui.node.dialog.defaultdialog.settingsconversion.NodeSettingsToJsonFormsSettings.fromNodeSettingsToDefaultNodeSettings(NodeSettingsToJsonFormsSettings.java:131)
+	at org.knime.core.webui.node.dialog.defaultdialog.settingsconversion.NodeSettingsToJsonFormsSettings.fromNodeSettingsToDefaultNodeSettingsOrDefault(NodeSettingsToJsonFormsSettings.java:137)
+	at org.knime.core.webui.node.dialog.defaultdialog.settingsconversion.NodeSettingsToJsonFormsSettings$GetSettings.getDefaultNodeSettingsUnchecked(NodeSettingsToJsonFormsSettings.java:156)
+	at org.knime.core.webui.node.dialog.defaultdialog.settingsconversion.NodeSettingsToJsonFormsSettings.allNodeSettingsToJsonFormsSettings(NodeSettingsToJsonFormsSettings.java:124)
+	at org.knime.core.webui.node.dialog.defaultdialog.settingsconversion.NodeSettingsToJsonFormsSettings.nodeSettingsToJsonFormsSettingsOrDefault(NodeSettingsToJsonFormsSettings.java:115)
+	at org.knime.core.webui.node.dialog.defaultdialog.DefaultNodeSettingsService.fromNodeSettings(DefaultNodeSettingsService.java:117)
+	at org.knime.core.webui.node.dialog.InitialData.get(InitialData.java:97)
+	at org.knime.core.webui.data.InitialDataService.getInitialData(InitialDataService.java:115)
+	at org.knime.core.webui.node.DataServiceManager.callInitialDataService(DataServiceManager.java:137)
+	at org.knime.gateway.api.entity.NodeUIExtensionEnt.<init>(NodeUIExtensionEnt.java:118)
+	at org.knime.gateway.api.entity.NodeUIExtensionEnt.<init>(NodeUIExtensionEnt.java:88)
+	at org.knime.gateway.api.entity.NodeDialogEnt.<init>(NodeDialogEnt.java:74)
+	at org.knime.js.cef.pagebuilder.PageBuilderUtil$NodeUIExtensionEnts.<init>(PageBuilderUtil.java:328)
+	at org.knime.js.cef.pagebuilder.PageBuilderUtil.initializePageBuilderForView(PageBuilderUtil.java:117)
+	at org.knime.js.cef.nodeview.CEFNodeView.lambda$6(CEFNodeView.java:389)
+	at org.knime.js.cef.nodeview.CEFNodeView$3.completed(CEFNodeView.java:403)
+	at com.equo.chromium.swt.internal.Chromium.lambda$10(Chromium.java:861)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4368)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3991)
+	at org.knime.js.cef.nodeview.CEFNodeView.blockUntilDisposed(CEFNodeView.java:442)
+	at org.knime.js.cef.nodeview.CEFNodeView.callOpenView(CEFNodeView.java:331)
+	at org.knime.core.node.AbstractNodeView.openView(AbstractNodeView.java:197)
+	at org.knime.core.node.Node.invokeOpenView(Node.java:2739)
+	at org.knime.workbench.editor2.actions.OpenNodeViewAction.openNodeView(OpenNodeViewAction.java:146)
+	at org.knime.workbench.editor2.editparts.NodeContainerEditPart.openNodeDialog(NodeContainerEditPart.java:862)
+	at org.knime.ui.java.api.NodeAPI.openNodeDialog(NodeAPI.java:97)
+	at jdk.internal.reflect.GeneratedMethodAccessor293.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.knime.ui.java.api.DesktopAPI.invokeMethod(DesktopAPI.java:167)
+	at org.knime.ui.java.api.DesktopAPI.lambda$1(DesktopAPI.java:138)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4368)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3991)
+	at org.knime.js.cef.nodeview.CEFNodeView.blockUntilDisposed(CEFNodeView.java:442)
+	at org.knime.js.cef.nodeview.CEFNodeView.callOpenView(CEFNodeView.java:331)
+	at org.knime.core.node.AbstractNodeView.openView(AbstractNodeView.java:197)
+	at org.knime.core.node.Node.invokeOpenView(Node.java:2739)
+	at org.knime.workbench.editor2.actions.OpenNodeViewAction.openNodeView(OpenNodeViewAction.java:146)
+	at org.knime.ui.java.api.PortAPI.lambda$1(PortAPI.java:94)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4368)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3991)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.knime.product.rcp.KNIMEApplication.start(KNIMEApplication.java:204)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+2024-01-14 22:28:30,866 : ERROR : main :  : NodeSettingsToJsonFormsSettings : Value Lookup : 4:9 : Failed to load settings ('String for key "lookupCol" not found.'). New settings are created for the dialog.
+org.knime.core.node.InvalidSettingsException: String for key "lookupCol" not found.
+	at org.knime.core.node.config.base.ConfigBase.getString(ConfigBase.java:410)
+	at jdk.internal.reflect.GeneratedMethodAccessor306.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.knime.core.webui.node.dialog.NodeAndVariableSettingsProxy.lambda$1(NodeAndVariableSettingsProxy.java:94)
+	at org.knime.core.webui.node.dialog.$Proxy73.getString(Unknown Source)
+	at org.knime.core.webui.node.dialog.defaultdialog.persistence.field.DefaultFieldNodeSettingsPersistorFactory$PersistorImpl.load(DefaultFieldNodeSettingsPersistorFactory.java:154)
+	at org.knime.core.webui.node.dialog.defaultdialog.persistence.field.DefaultFieldNodeSettingsPersistor.load(DefaultFieldNodeSettingsPersistor.java:78)
+	at org.knime.core.webui.node.dialog.defaultdialog.persistence.field.FieldBasedNodeSettingsPersistor.lambda$2(FieldBasedNodeSettingsPersistor.java:113)
+	at org.knime.core.webui.node.dialog.defaultdialog.persistence.field.FieldBasedNodeSettingsPersistor.useBlackMagicToAccessFields(FieldBasedNodeSettingsPersistor.java:124)
+	at org.knime.core.webui.node.dialog.defaultdialog.persistence.field.FieldBasedNodeSettingsPersistor.load(FieldBasedNodeSettingsPersistor.java:113)
+	at org.knime.core.webui.node.dialog.defaultdialog.persistence.field.FieldBasedNodeSettingsPersistor.load(FieldBasedNodeSettingsPersistor.java:1)
+	at org.knime.core.webui.node.dialog.defaultdialog.DefaultNodeSettings.loadSettings(DefaultNodeSettings.java:370)
+	at org.knime.core.webui.node.dialog.defaultdialog.settingsconversion.NodeSettingsToJsonFormsSettings.fromNodeSettingsToDefaultNodeSettings(NodeSettingsToJsonFormsSettings.java:131)
+	at org.knime.core.webui.node.dialog.defaultdialog.settingsconversion.NodeSettingsToJsonFormsSettings.fromNodeSettingsToDefaultNodeSettingsOrDefault(NodeSettingsToJsonFormsSettings.java:137)
+	at org.knime.core.webui.node.dialog.defaultdialog.settingsconversion.NodeSettingsToJsonFormsSettings$GetSettings.getDefaultNodeSettingsUnchecked(NodeSettingsToJsonFormsSettings.java:156)
+	at org.knime.core.webui.node.dialog.defaultdialog.settingsconversion.NodeSettingsToJsonFormsSettings.allNodeSettingsToJsonFormsSettings(NodeSettingsToJsonFormsSettings.java:124)
+	at org.knime.core.webui.node.dialog.defaultdialog.settingsconversion.NodeSettingsToJsonFormsSettings.nodeSettingsToJsonFormsSettingsOrDefault(NodeSettingsToJsonFormsSettings.java:115)
+	at org.knime.core.webui.node.dialog.defaultdialog.DefaultNodeSettingsService.fromNodeSettings(DefaultNodeSettingsService.java:117)
+	at org.knime.core.webui.node.dialog.InitialData.get(InitialData.java:97)
+	at org.knime.core.webui.data.InitialDataService.getInitialData(InitialDataService.java:115)
+	at org.knime.core.webui.node.DataServiceManager.callInitialDataService(DataServiceManager.java:137)
+	at org.knime.gateway.api.entity.NodeUIExtensionEnt.<init>(NodeUIExtensionEnt.java:118)
+	at org.knime.gateway.api.entity.NodeUIExtensionEnt.<init>(NodeUIExtensionEnt.java:88)
+	at org.knime.gateway.api.entity.NodeDialogEnt.<init>(NodeDialogEnt.java:74)
+	at org.knime.js.cef.pagebuilder.PageBuilderUtil$NodeUIExtensionEnts.<init>(PageBuilderUtil.java:328)
+	at org.knime.js.cef.pagebuilder.PageBuilderUtil.initializePageBuilderForView(PageBuilderUtil.java:117)
+	at org.knime.js.cef.nodeview.CEFNodeView.lambda$6(CEFNodeView.java:389)
+	at org.knime.js.cef.nodeview.CEFNodeView$3.completed(CEFNodeView.java:403)
+	at com.equo.chromium.swt.internal.Chromium.lambda$10(Chromium.java:861)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4368)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3991)
+	at org.knime.js.cef.nodeview.CEFNodeView.blockUntilDisposed(CEFNodeView.java:442)
+	at org.knime.js.cef.nodeview.CEFNodeView.callOpenView(CEFNodeView.java:331)
+	at org.knime.core.node.AbstractNodeView.openView(AbstractNodeView.java:197)
+	at org.knime.core.node.Node.invokeOpenView(Node.java:2739)
+	at org.knime.workbench.editor2.actions.OpenNodeViewAction.openNodeView(OpenNodeViewAction.java:146)
+	at org.knime.workbench.editor2.editparts.NodeContainerEditPart.openNodeDialog(NodeContainerEditPart.java:862)
+	at org.knime.ui.java.api.NodeAPI.openNodeDialog(NodeAPI.java:97)
+	at jdk.internal.reflect.GeneratedMethodAccessor293.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.knime.ui.java.api.DesktopAPI.invokeMethod(DesktopAPI.java:167)
+	at org.knime.ui.java.api.DesktopAPI.lambda$1(DesktopAPI.java:138)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4368)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3991)
+	at org.knime.js.cef.nodeview.CEFNodeView.blockUntilDisposed(CEFNodeView.java:442)
+	at org.knime.js.cef.nodeview.CEFNodeView.callOpenView(CEFNodeView.java:331)
+	at org.knime.core.node.AbstractNodeView.openView(AbstractNodeView.java:197)
+	at org.knime.core.node.Node.invokeOpenView(Node.java:2739)
+	at org.knime.workbench.editor2.actions.OpenNodeViewAction.openNodeView(OpenNodeViewAction.java:146)
+	at org.knime.ui.java.api.PortAPI.lambda$1(PortAPI.java:94)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4368)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3991)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.knime.product.rcp.KNIMEApplication.start(KNIMEApplication.java:204)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+2024-01-14 22:29:30,075 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-01-14 22:29:30,075 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-01-14 23:12:14,100 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-01-14 23:12:14,100 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-01-14 23:12:14,100 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-01-14 23:12:27,155 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-01-14 23:12:29,513 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-01-14 23:12:33,519 : ERROR : main :  : CEFNodeView :  :  : Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'length') (source: http://org.knime.core.ui.view/uiext/tableview/TableView.umd.js; line: 67)
+2024-01-14 23:16:26,853 : WARN  : main :  : Node : Partitioning : 5:3 : No sampling method selected
+2024-01-15 00:07:16,377 : WARN  : main :  : Node : Decision Tree Learner : 5:4 : Guessing target column: "Outcome".
+2024-01-15 00:15:35,795 : WARN  : comm-pool-thread-83 :  : Node : Scorer : 5:6 : No columns selected yet.
+2024-01-15 00:15:51,139 : WARN  : KNIME-Worker-172-Scorer 5:6 :  : Node : Scorer : 5:6 : There were missing values in the reference or in the prediction class columns.
+2024-01-15 00:39:31,293 : WARN  : main :  : Node : Random Forest Learner : 5:7 : No configuration available
+2024-01-15 14:41:43,436 : WARN  : comm-pool-thread-91 :  : Node : Sorter : 5:10 : No selected columns to sort
+2024-01-15 14:49:20,132 : WARN  : comm-pool-thread-93 :  : Node : Moving Aggregator : 5:12 : No aggregation column was defined. No aggregation will be done.
+2024-01-15 19:25:51,898 : WARN  : comm-pool-thread-107 :  : Node : Numeric Outliers : 6:2 : Auto configuration: Outlier Selection uses all suitable columns (in total 4).
+2024-01-15 19:34:58,728 : WARN  : main :  : Node : Normalizer : 6:3 : Auto-configure: [0, 1] normalization on all numeric columns: "Customer_ID", "Average Price", "Basket Size",  ... <1 more>
+2024-01-15 19:44:55,429 : WARN  : comm-pool-thread-114 :  : Node : Color Manager : 6:6 : Selected column "Cluster" with default nominal color mapping.
+2024-01-15 19:50:06,914 : WARN  : KNIME-Worker-218-Scatter Matrix (legacy) 6:7 :  : Node : Scatter Matrix (legacy) : 6:7 : Only the first 2500 rows are displayed.
+2024-01-15 19:50:43,250 : WARN  : KNIME-Worker-219-Scatter Matrix (legacy) 6:7 :  : Node : Scatter Matrix (legacy) : 6:7 : Only the first 2500 rows are displayed.
+2024-01-15 23:09:15,257 : WARN  : ModalContext :  : Node : Excel Writer : 8:25 : Execute failed: Output file '/Users/vanpham/Desktop/Knime Data/StudyCase chapter 3.xlsx' exists and must not be overwritten due to user settings.
+2024-01-20 16:39:26,411 : ERROR : ModalContext :  : SaveProject :  :  : Workflow save attempt: Saving the workflow didn't work
+java.io.FileNotFoundException: /var/folders/pz/4q79b3093s184gwnb2zrrvwm0000gn/T/knime_improving ROI_17371/knime_container_20240114_4095564119992978929.bin.snappy (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(Unknown Source)
+	at java.base/java.io.FileInputStream.<init>(Unknown Source)
+	at org.knime.core.data.container.Buffer.addToZipFile(Buffer.java:1872)
+	at org.knime.core.data.container.BufferedContainerTable.saveToFile(BufferedContainerTable.java:224)
+	at org.knime.core.node.BufferedDataTable.save(BufferedDataTable.java:627)
+	at org.knime.core.node.BufferedDataTable.save(BufferedDataTable.java:680)
+	at org.knime.core.node.BufferedDataTable.save(BufferedDataTable.java:680)
+	at org.knime.core.node.FileNodePersistor.saveBufferedDataTable(FileNodePersistor.java:1439)
+	at org.knime.core.node.FileNodePersistor.savePort(FileNodePersistor.java:1344)
+	at org.knime.core.node.FileNodePersistor.savePorts(FileNodePersistor.java:1248)
+	at org.knime.core.node.FileNodePersistor.save(FileNodePersistor.java:1202)
+	at org.knime.core.node.workflow.FileNativeNodeContainerPersistor.save(FileNativeNodeContainerPersistor.java:527)
+	at org.knime.core.node.workflow.FileSingleNodeContainerPersistor.save(FileSingleNodeContainerPersistor.java:640)
+	at org.knime.core.node.workflow.FileWorkflowPersistor.saveNodeContainer(FileWorkflowPersistor.java:2308)
+	at org.knime.core.node.workflow.FileWorkflowPersistor.saveContent(FileWorkflowPersistor.java:2056)
+	at org.knime.core.node.workflow.FileWorkflowPersistor.save(FileWorkflowPersistor.java:1947)
+	at org.knime.core.node.workflow.WorkflowManager.save(WorkflowManager.java:9440)
+	at org.knime.core.node.workflow.WorkflowManager.save(WorkflowManager.java:9389)
+	at org.knime.ui.java.api.SaveProject.saveRegularWorkflow(SaveProject.java:209)
+	at org.knime.ui.java.api.SaveProject.saveLocalProject(SaveProject.java:184)
+	at org.knime.ui.java.api.SaveProject.saveProject(SaveProject.java:175)
+	at org.knime.ui.java.api.SaveProject.lambda$4(SaveProject.java:158)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+2024-01-20 16:39:30,528 : ERROR : ModalContext :  : SaveProject :  :  : Workflow save attempt: Saving the workflow didn't work
+java.io.FileNotFoundException: /var/folders/pz/4q79b3093s184gwnb2zrrvwm0000gn/T/knime_improving ROI_17371/knime_container_20240114_4095564119992978929.bin.snappy (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(Unknown Source)
+	at java.base/java.io.FileInputStream.<init>(Unknown Source)
+	at org.knime.core.data.container.Buffer.addToZipFile(Buffer.java:1872)
+	at org.knime.core.data.container.BufferedContainerTable.saveToFile(BufferedContainerTable.java:224)
+	at org.knime.core.node.BufferedDataTable.save(BufferedDataTable.java:627)
+	at org.knime.core.node.BufferedDataTable.save(BufferedDataTable.java:680)
+	at org.knime.core.node.BufferedDataTable.save(BufferedDataTable.java:680)
+	at org.knime.core.node.FileNodePersistor.saveBufferedDataTable(FileNodePersistor.java:1439)
+	at org.knime.core.node.FileNodePersistor.savePort(FileNodePersistor.java:1344)
+	at org.knime.core.node.FileNodePersistor.savePorts(FileNodePersistor.java:1248)
+	at org.knime.core.node.FileNodePersistor.save(FileNodePersistor.java:1202)
+	at org.knime.core.node.workflow.FileNativeNodeContainerPersistor.save(FileNativeNodeContainerPersistor.java:527)
+	at org.knime.core.node.workflow.FileSingleNodeContainerPersistor.save(FileSingleNodeContainerPersistor.java:640)
+	at org.knime.core.node.workflow.FileWorkflowPersistor.saveNodeContainer(FileWorkflowPersistor.java:2308)
+	at org.knime.core.node.workflow.FileWorkflowPersistor.saveContent(FileWorkflowPersistor.java:2056)
+	at org.knime.core.node.workflow.FileWorkflowPersistor.save(FileWorkflowPersistor.java:1947)
+	at org.knime.core.node.workflow.WorkflowManager.save(WorkflowManager.java:9440)
+	at org.knime.core.node.workflow.WorkflowManager.save(WorkflowManager.java:9389)
+	at org.knime.ui.java.api.SaveProject.saveRegularWorkflow(SaveProject.java:209)
+	at org.knime.ui.java.api.SaveProject.saveLocalProject(SaveProject.java:184)
+	at org.knime.ui.java.api.SaveProject.saveProject(SaveProject.java:175)
+	at org.knime.ui.java.api.SaveProject.lambda$4(SaveProject.java:158)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)

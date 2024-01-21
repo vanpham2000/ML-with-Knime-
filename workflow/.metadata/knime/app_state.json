@@ -1,0 +1,28 @@
+{
+  "version" : "5.2.0.v202311301336",
+  "projects" : [ {
+    "name" : "KNIME_project",
+    "active" : false,
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "relativePath" : "KNIME_project"
+    }
+  }, {
+    "name" : "hello world",
+    "active" : false,
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "relativePath" : "chapter 2/hello world"
+    }
+  }, {
+    "name" : "cleaning_data",
+    "active" : true,
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "relativePath" : "chapter 2/cleaning_data"
+    }
+  } ]
+}

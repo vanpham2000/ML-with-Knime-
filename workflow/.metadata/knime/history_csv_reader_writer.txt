@@ -1,0 +1,3 @@
+/Users/vanpham/Desktop/Knime Data/eCommerce-Data/eCommerce-CustomerMD.csv
+/Users/vanpham/Desktop/Knime Data/Revise_data.csv
+/Users/vanpham/Downloads/raw_sales_country.csv

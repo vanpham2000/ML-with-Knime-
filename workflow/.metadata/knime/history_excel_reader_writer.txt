@@ -1,0 +1,3 @@
+/Users/vanpham/Desktop/Knime Data/StudyCase chapter 3.xlsx
+/Users/vanpham/Desktop/Knime Data/DirtyData.xlsx
+/Users/vanpham/Downloads/new_file.xlsx
